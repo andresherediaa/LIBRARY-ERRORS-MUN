@@ -14,7 +14,6 @@ export abstract class Listener<T extends Event> {
     constructor(channel: Channel) {
         this.channel = channel;
     }
-
     async listen() {
         await this.channel.assertQueue(this.subject, {
             durable: false,
