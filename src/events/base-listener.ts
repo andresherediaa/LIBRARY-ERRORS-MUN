@@ -10,7 +10,7 @@ export abstract class Listener<T extends Event> {
     abstract subject: T["subject"];
     abstract onMessage(data: T["data"], msg: any): void;
     private channel: Channel;
-    constructor(channel: Channel, durable: boolean) {
+    constructor(channel: Channel) {
         this.channel = channel;
     }
     async listen() {
