@@ -1,5 +1,5 @@
 {
-    "name": "@munlib/common",
+    "name": "munlib/common",
     "version": "1.0.12",
     "description": "",
     "main": "./build/index.js",
