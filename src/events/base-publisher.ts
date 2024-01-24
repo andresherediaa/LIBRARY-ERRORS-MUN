@@ -9,7 +9,6 @@ interface Event {
 export abstract class Publisher<T extends Event> {
     abstract subject: T["subject"];
     protected channel!: Channel;
-
     constructor(channel: Channel) {
         this.channel = channel;
     }

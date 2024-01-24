@@ -16,7 +16,7 @@ export abstract class Listener<T extends Event> {
     }
     async listen() {
         await this.channel.assertQueue(this.subject, {
-            durable: false,
+            durable: true,
         });
 
         this.channel.consume(this.subject, (msg) => {
