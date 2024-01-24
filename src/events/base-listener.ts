@@ -15,9 +15,7 @@ export abstract class Listener<T extends Event> {
         this.channel = channel;
     }
     async listen() {
-        await this.channel.assertQueue(this.subject, {
-            durable: true,
-        });
+        await this.channel.assertQueue(this.subject);
         this.channel.consume(this.subject, (msg) => {
             if (msg) {
                 const parsedData = this.parseMessage(msg);
