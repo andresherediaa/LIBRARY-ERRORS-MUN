@@ -10,13 +10,15 @@ export abstract class Listener<T extends Event> {
     abstract subject: T["subject"];
     abstract onMessage(data: T["data"], msg: any): void;
     private channel: Channel;
+    private durable: boolean;
 
 
-    constructor(channel: Channel) {
+    constructor(channel: Channel, durable: boolean) {
         this.channel = channel;
+        this.durable = durable;
     }
     async listen() {
-        await this.channel.assertQueue(this.subject, {  durable: true });
+        await this.channel.assertQueue(this.subject, {  durable: this.durable  });
         this.channel.consume(this.subject, (msg) => {
             if (msg) {
                 const parsedData = this.parseMessage(msg);
