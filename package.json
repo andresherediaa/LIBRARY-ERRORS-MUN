@@ -1,6 +1,6 @@
 {
-    "name": "munlib/common",
-    "version": "1.0.12",
+    "name": "@npm-packages/billetera",
+    "version": "1.0.0",
     "description": "",
     "main": "./build/index.js",
     "types": "./build/index.d.ts",
@@ -29,5 +29,11 @@
         "jsonwebtoken": "^8.5.1",
         "@types/amqplib": "^0.10.4",
         "amqplib": "^0.10.3"
-    }
+    },
+    "publishConfig":{
+        "@my-org:registry": "https://artifactory.cuenca.gob.ec/api/v4/projects/14/packages/npm/"
+    },
+    "publishConfig":{
+        "registry": "https://artifactory.cuenca.gob.ec/api/v4/projects/14/packages/npm/"
+     }
 }
