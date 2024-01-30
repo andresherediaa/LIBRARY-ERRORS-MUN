@@ -16,12 +16,13 @@ declare global {
   }
 }
 
+
 export const currentUser = (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
-  
+
   console.log("7777777777", !req.session?.jwt);
   if (!req.session?.jwt) {//no se ejcuta si existe jwt
     return next();
