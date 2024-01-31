@@ -21,9 +21,8 @@ export const currentUser = (
   res: Response,
   next: NextFunction
 ) => {
-  
-  console.log("7777777777", !req.session?.jwt, req.session);
 
+  console.log("7777777777", !req.session?.jwt, req.session);
 
   if (!req.session?.jwt) {//no se ejcuta si existe jwt
     return next();
