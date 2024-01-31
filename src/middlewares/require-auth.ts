@@ -21,7 +21,6 @@ export const currentUser = (
   res: Response,
   next: NextFunction
 ) => {
-
   console.log("7777777777", !req.session?.jwt, req.session);
 
 
