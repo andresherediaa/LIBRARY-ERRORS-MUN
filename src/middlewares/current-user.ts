@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+/* import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 
 interface UserPayload {
@@ -33,3 +33,4 @@ export const currentUser = (
 
   next();
 };
+ */
