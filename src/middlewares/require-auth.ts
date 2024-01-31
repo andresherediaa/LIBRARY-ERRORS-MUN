@@ -7,7 +7,6 @@ interface UserPayload {
   email: string;
   type: string;
 }
-
 declare global {
   namespace Express {
     interface Request {
@@ -23,7 +22,7 @@ export const currentUser = (
   next: NextFunction
 ) => {
 
-  console.log("7777777777", !req.session?.jwt);
+  console.log("7777777777", !req.session?.jwt, req.session);
   if (!req.session?.jwt) {//no se ejcuta si existe jwt
     return next();
   }
