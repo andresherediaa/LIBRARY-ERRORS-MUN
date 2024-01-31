@@ -15,7 +15,7 @@ declare global {
     }
 }
 
-export const currentUser = (
+export const requireAuth = (
     req: Request,
     res: Response,
     next: NextFunction
@@ -30,9 +30,8 @@ export const currentUser = (
             req.session.jwt,
             process.env.JWT_KEY!
         ) as UserPayload;
-        req.user= payload;
+        req.user = payload;
     } catch (err) {
-        // Manejar errores al decodificar el token (puedes personalizar esto según tus necesidades)
         throw new NotAuthorizedError();
     }
 
