@@ -10,7 +10,7 @@ interface UserPayload {
 declare global {
     namespace Express {
         interface Request {
-            user?: UserPayload;
+            currentUser?: UserPayload;
         }
     }
 }
@@ -31,7 +31,7 @@ export const requireAuth = (
             req.session.jwt,
             process.env.JWT_KEY!
         ) as UserPayload;
-        req.user = payload;
+        req.currentUser = payload;
     } catch (err) {
         throw new NotAuthorizedError();
     }
