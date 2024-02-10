@@ -18,7 +18,6 @@ declare global {
         }
     }
 }
-
 export const requireAuth = (
     req: Request,
     res: Response,
