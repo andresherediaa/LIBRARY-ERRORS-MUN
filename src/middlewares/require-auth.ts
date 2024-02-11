@@ -3,6 +3,7 @@ import { NotAuthorizedError } from "../errors/not-authorized-error";
 import jwt from "jsonwebtoken";
 
 interface UserAttrs {
+    id: string;
     email: string;
     password: string;
     isAdmin: boolean;
