@@ -24,7 +24,7 @@ export interface OrderCreatedEvent {
         id: string;
         status: OrderStatus;
         userId: string;
-        expiresAt: Date;
+        expiresAt?: Date;
         version: number;
         cart?: CartInterface[]; // Cambiado a la nueva interfaz
         paymentMethod: string;
