@@ -11,7 +11,7 @@ export abstract class Publisher<T extends Event> {
     abstract exchangeName: T["exchangeName"];
     abstract exchangeType: T["exchangeType"];
     abstract routingKey: T["routingKey"];
-    protected channel!: Channel;
+    protected channel: Channel;
     constructor(channel: Channel) {
         this.channel = channel;
     }
