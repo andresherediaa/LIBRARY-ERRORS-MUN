@@ -21,7 +21,6 @@ interface Titulo {
     anio: number;
     rubro: string;
 }
-
 export interface OrderUpdatedEvent {
     exchangeName: ExchangeNames;
     exchangeType: ExchangeTypes;
@@ -31,18 +30,15 @@ export interface OrderUpdatedEvent {
         id: string;
         status: OrderStatus;
         userId: string;
-        expiresAt: Date;
+        expiresAt?: Date;
+        version: number;
         cart?: CartInterface[]; // Cambiado a la nueva interfaz
         paymentMethod: string;
-        itemsPrice: number;
-        shippingPrice: number;
-        taxPrice: number;
-        totalPrice: number;
+        totalDeuda: number;
         isPaid?: boolean;
         paidAt?: Date;
         isDelivered?: boolean;
         deliveredAt?: Date;
-        version: number;
     };
 }
 
