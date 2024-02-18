@@ -18,4 +18,3 @@ export * from './events/OrderCreatedEvent';
 export * from './events/PaymentCreatedEvent';
 export * from './events/ExpirationCompletedEvent';
 export * from './events/types/order-status';
-export * from './events/types/queue-group-name';
