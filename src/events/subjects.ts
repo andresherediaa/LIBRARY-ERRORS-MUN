@@ -20,7 +20,7 @@ export enum ExchangeTypes {
 }
 
 export enum QueueNames {
-  OrderQueue = 'orer:Queue',
+  OrderQueue = 'order:Queue',
   PaymentQueue = 'payment:Queue',
   DeudasQueue = 'deudas:Queue',
   ConsultasQueue = 'consultas:Queue'

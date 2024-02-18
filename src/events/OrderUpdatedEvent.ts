@@ -1,5 +1,4 @@
 import { OrderStatus } from "..";
-import { Subjects } from "./subjects";
 
 interface CartInterface {
     fechaHoraLocal: string;
@@ -19,7 +18,6 @@ interface Titulo {
 }
 
 export interface OrderUpdatedEvent {
-    subject: Subjects.OrderUpdated;
     data: {
         id: string;
         status: OrderStatus;
