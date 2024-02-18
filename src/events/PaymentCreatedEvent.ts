@@ -4,7 +4,7 @@ export interface PaymentCreatedEvent {
     exchangeName: ExchangeNames;
     exchangeType: ExchangeTypes;
     routingKey: RoutingKeys;
-    queueName?: QueueNames;
+    queueName: QueueNames;
     data: {
         id: string;
         orderId: string;

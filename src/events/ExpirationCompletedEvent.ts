@@ -8,7 +8,7 @@ export interface ExpirationCompletedEvent {
     exchangeName: ExchangeNames;
     exchangeType: ExchangeTypes;
     routingKey: RoutingKeys;
-    queueName?: QueueNames;
+    queueName: QueueNames;
     data: {
         orderId: string;
     };

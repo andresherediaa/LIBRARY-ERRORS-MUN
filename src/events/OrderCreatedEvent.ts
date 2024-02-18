@@ -26,7 +26,7 @@ export interface OrderCreatedEvent {
     exchangeName: ExchangeNames;
     exchangeType: ExchangeTypes;
     routingKey: RoutingKeys;
-    queueName?: QueueNames;
+    queueName: QueueNames;
     data: {
         id: string;
         status: OrderStatus;
