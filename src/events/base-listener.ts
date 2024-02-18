@@ -20,7 +20,7 @@ export abstract class Listener<T extends Event> {
     protected queueName: T["queueName"];
     protected routingKey: T["routingKey"];
     protected channel: Channel;
-    abstract onMessage(data: T["data"]): void;
+    abstract onMessage(data: T["data"], msg: ConsumeMessage): void;
 
     constructor(
         channel: Channel,
