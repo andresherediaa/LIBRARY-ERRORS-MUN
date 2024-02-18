@@ -1,5 +1,10 @@
 import { OrderStatus } from "..";
-
+import {
+    ExchangeNames,
+    ExchangeTypes,
+    QueueNames,
+    RoutingKeys,
+} from "./subjects";
 interface CartInterface {
     fechaHoraLocal: string;
     fechaCompensacion: string;
@@ -18,6 +23,10 @@ interface Titulo {
 }
 
 export interface OrderCreatedEvent {
+    exchangeName: ExchangeNames;
+    exchangeType: ExchangeTypes;
+    routingKey: RoutingKeys;
+    queueName?: QueueNames;
     data: {
         id: string;
         status: OrderStatus;
