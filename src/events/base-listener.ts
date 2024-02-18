@@ -1,4 +1,4 @@
-import { Channel } from "amqplib";
+import { Channel, ConsumeMessage } from "amqplib";
 import {
     ExchangeNames,
     ExchangeTypes,
@@ -50,10 +50,10 @@ export abstract class Listener<T extends Event> {
             this.routingKey
         );
 
-        this.channel.consume(this.queueName, (msg) => {
+        this.channel.consume(this.queueName, (msg: ConsumeMessage | null) => {
             if (msg) {
                 const parsedData = this.parseMessage(msg);
-                this.onMessage(parsedData);
+                this.onMessage(parsedData, msg);
             }
         });
     }
