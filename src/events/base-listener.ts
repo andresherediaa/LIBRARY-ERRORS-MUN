@@ -1,10 +1,5 @@
 import { Channel } from "amqplib";
-import { Subjects } from "./subjects";
-
-interface Event {
-    subject: Subjects;
-    data: any;
-}
+import { ExchangeNames, ExchangeTypes } from "./subjects";
 
 export abstract class Listener<T extends Event> {
     abstract subject: T["subject"];
@@ -14,6 +9,13 @@ export abstract class Listener<T extends Event> {
         this.channel = channel;
     }
     async listen() {
+        await this.channel.assertExchange(
+            ExchangeNames.exchangeName,
+            ExchangeTypes.Direct,
+            {
+                durable: false,
+            }
+        );
         await this.channel.assertQueue(this.subject);
         this.channel.consume(this.subject, (msg) => {
             if (msg) {
