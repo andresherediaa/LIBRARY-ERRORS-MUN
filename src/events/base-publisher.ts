@@ -1,11 +1,11 @@
 import { connect, Channel, Connection } from "amqplib";
 
-interface Event {
+interface Event<T> {
     routingKey: string;
-    data: any;
+    data: T;
 }
 
-export class OrderUpdatedPublisher {
+export class Publisher<T> {
     private connection!: Connection;
     private channel!: Channel;
     private exchangeName: string;
@@ -17,7 +17,7 @@ export class OrderUpdatedPublisher {
     }
 
     async connect(url: string) {
-        this.connection = await connect(url); //process.env.MESSAGE_BROKER_URL!
+        this.connection = await connect(url);
         this.channel = await this.connection.createChannel();
         await this.channel.assertExchange(
             this.exchangeName,
@@ -28,7 +28,7 @@ export class OrderUpdatedPublisher {
         );
     }
 
-    async publish(event: Event) {
+    async publish(event: Event<T>) {
         await this.channel.publish(
             this.exchangeName,
             event.routingKey,
