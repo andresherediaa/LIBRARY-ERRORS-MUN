@@ -5,7 +5,7 @@ interface ListenerData<T> {
 }
 export abstract class Listener<T extends ListenerData<T["data"]>> {
     private connection!: Connection;
-    private channel!: Channel;
+    protected channel!: Channel;
     private exchangeName: string;
     private exchangeType: string;
     private queueName: string;
@@ -46,6 +46,7 @@ export abstract class Listener<T extends ListenerData<T["data"]>> {
             if (msg) {
                 const data: T["data"] = JSON.parse(msg.content.toString());
                 this.onMessage(data, msg, this.channel);
+                this.channel.ack(msg);
             }
         });
     }
