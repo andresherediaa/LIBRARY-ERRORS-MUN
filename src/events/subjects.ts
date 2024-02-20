@@ -1,11 +1,8 @@
 export enum RoutingKeys {
-    ProductCreated = "product:created",
-    ProductUpdated = "product:updated",
-    ProductDeleted = "product:deleted",
     OrderCreated = "order:created",
     OrderUpdated = "order:updated",
-    ExpirationCompleted = "expiration:completed",
     PaymentCreated = "payment:created",
+    ExpirationCompleted = "expiration:completed",
     Empty = "",
 }
 
@@ -21,8 +18,9 @@ export enum ExchangeTypes {
 }
 
 export enum QueueNames {
-    OrderQueue = "order:Queue",
-    PaymentQueue = "payment:Queue",
-    DeudasQueue = "deudas:Queue",
-    ConsultasQueue = "consultas:Queue",
+    OrderCreated = "order:created",
+    OrderUpdated = "order:updated",
+    PaymentCreated = "payment:created",
+    PaymentUpdated = "payment:created",
+    ExpirationCompleted = "expiration:completed",
 }
