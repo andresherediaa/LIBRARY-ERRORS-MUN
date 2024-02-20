@@ -1,4 +1,4 @@
-import { connect, Channel, Connection } from "amqplib";
+import { connect, Channel, Connection, ConsumeMessage } from "amqplib";
 
 interface ListenerData<T> {
     data: T;
@@ -11,7 +11,7 @@ export abstract class Listener<T extends ListenerData<T["data"]>> {
     private queueName: string;
     private routingKey: string;
 
-    abstract onMessage(data: T["data"], msg: any, channel: Channel): void;
+    abstract onMessage(data: T["data"], msg: ConsumeMessage, channel: Channel): void;
 
     constructor(
         exchangeName: string,
