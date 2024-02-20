@@ -5,15 +5,9 @@ import {
     QueueNames,
     RoutingKeys,
 } from "./subjects";
-interface CartInterface {
-    fechaHoraLocal: string;
-    fechaCompensacion: string;
-    adquiriente?: string;
-    secuencia: string;
-    terminal: string;
-    titulos?: Titulo[];
-    institucion: string;
-    totalInstitucion: number;
+
+interface CartItem {
+    [key: string]: any;
 }
 
 interface Titulo {
@@ -32,7 +26,7 @@ export interface OrderUpdatedEvent {
         userId: string;
         expiresAt?: Date;
         version: number;
-        cart?: CartInterface[]; // Cambiado a la nueva interfaz
+        cart?: CartItem[]; // Cambiado a la nueva interfaz
         paymentMethod: string;
         totalDeuda: number;
         isPaid?: boolean;
