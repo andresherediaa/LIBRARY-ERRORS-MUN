@@ -1,65 +1,57 @@
-import { Channel, ConsumeMessage } from "amqplib";
-import {
-    ExchangeNames,
-    ExchangeTypes,
-    QueueNames,
-    RoutingKeys,
-} from "./subjects";
+import { connect, Channel, Connection } from "amqplib";
 
-interface Event {
-    exchangeName: ExchangeNames;
-    exchangeType: ExchangeTypes;
-    queueName: QueueNames;
-    routingKey: RoutingKeys;
-    data: any;
+interface ListenerData<T> {
+    data: T;
 }
+export abstract class Listener<T extends ListenerData<T["data"]>> {
+    private connection!: Connection;
+    private channel!: Channel;
+    private exchangeName: string;
+    private exchangeType: string;
+    private queueName: string;
+    private routingKey: string;
 
-export abstract class Listener<T extends Event> {
-    protected exchangeName: T["exchangeName"];
-    protected exchangeType: T["exchangeType"];
-    protected queueName: T["queueName"];
-    protected routingKey: T["routingKey"];
-    protected channel: Channel;
-    abstract onMessage(data: T["data"], msg: ConsumeMessage): void;
+    abstract onMessage(data: T["data"], msg: any, channel: Channel): void;
 
     constructor(
-        channel: Channel,
-        exchangeName: ExchangeNames,
-        exchangeType: ExchangeTypes,
-        queueName: QueueNames,
-        routingKey: RoutingKeys
+        exchangeName: string,
+        exchangeType: string,
+        queueName: string,
+        routingKey: string
     ) {
-        this.channel = channel;
         this.exchangeName = exchangeName;
         this.exchangeType = exchangeType;
         this.queueName = queueName;
         this.routingKey = routingKey;
     }
-    async listen() {
+
+    async connect() {
+        this.connection = await connect(process.env.MESSAGE_BROKER_URL!);
+        this.channel = await this.connection.createChannel();
         await this.channel.assertExchange(
             this.exchangeName,
             this.exchangeType,
-            {
-                durable: false,
-            }
-        );
-        await this.channel.assertQueue(this.queueName, { durable: false });
-        await this.channel.bindQueue(
-            this.queueName,
-            this.exchangeName,
-            this.routingKey
+            { durable: false }
         );
 
-        this.channel.consume(this.queueName, (msg: ConsumeMessage | null) => {
+        const { queue } = await this.channel.assertQueue(this.queueName, {
+            exclusive: false,
+        });
+        console.log(`Listening for messages on queue: ${queue}`);
+
+        // Bind the queue to the exchange with a routing key
+        this.channel.bindQueue(queue, this.exchangeName, this.routingKey);
+
+        this.channel.consume(queue, async (msg) => {
             if (msg) {
-                const parsedData = this.parseMessage(msg);
-                this.onMessage(parsedData, msg);
+                const data: T["data"] = JSON.parse(msg.content.toString());
+                this.onMessage(data, msg, this.channel);
             }
         });
     }
 
-    parseMessage(msg: any) {
-        const data = msg.content.toString();
-        return JSON.parse(data);
+    async close() {
+        await this.channel.close();
+        await this.connection.close();
     }
 }
