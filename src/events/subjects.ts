@@ -26,6 +26,6 @@ export enum QueueNames {
 }
 
 export enum Instituciones {
-    Etapa = "Etapa",
-    Municipio = "Municipio"
+    ETAPA = "ETAPA",
+    MUNICIPIO = "MUNICIPIO"
 }
