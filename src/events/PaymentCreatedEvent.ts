@@ -8,7 +8,7 @@ export interface PaymentCreatedEvent {
     data: {
         id: string;
         orderId: string;
-        paymnetId: string;
+        paymentId: string;
         version?: number;
     };
 }
