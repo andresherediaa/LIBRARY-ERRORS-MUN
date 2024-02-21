@@ -24,3 +24,8 @@ export enum QueueNames {
     PaymentUpdated = "payment:created",
     ExpirationCompleted = "expiration:completed",
 }
+
+export enum Instituciones {
+    Etapa = "Etapa",
+    Municipio = "Municipio"
+}
