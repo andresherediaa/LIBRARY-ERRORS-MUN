@@ -21,7 +21,7 @@ export enum QueueNames {
     OrderCreated = "order_created",
     OrderUpdated = "order_updated",
     PaymentCreated = "payment_created",
-    PaymentUpdated = "payment_created",
+    PaymentUpdated = "payment_updated",
     ExpirationCompleted = "expiration_completed",
 }
 
