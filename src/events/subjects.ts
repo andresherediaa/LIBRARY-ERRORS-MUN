@@ -1,13 +1,13 @@
 export enum RoutingKeys {
-    OrderCreated = "order:created",
-    OrderUpdated = "order:updated",
-    PaymentCreated = "payment:created",
-    ExpirationCompleted = "expiration:completed",
+    OrderCreated = "key_order_created",
+    OrderUpdated = "key_order_updated",
+    PaymentCreated = "key_payment_created",
+    ExpirationCompleted = "key_expiration_completed",
     Empty = "",
 }
 
 export enum ExchangeNames {
-    exchangeName = "billetera:bus",
+    exchangeName = "billetera_bus",
 }
 
 export enum ExchangeTypes {
@@ -18,11 +18,11 @@ export enum ExchangeTypes {
 }
 
 export enum QueueNames {
-    OrderCreated = "order:created",
-    OrderUpdated = "order:updated",
-    PaymentCreated = "payment:created",
-    PaymentUpdated = "payment:created",
-    ExpirationCompleted = "expiration:completed",
+    OrderCreated = "order_created",
+    OrderUpdated = "order_updated",
+    PaymentCreated = "payment_created",
+    PaymentUpdated = "payment_created",
+    ExpirationCompleted = "expiration_completed",
 }
 
 export enum Instituciones {
