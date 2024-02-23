@@ -25,7 +25,7 @@ export const requireAuth = (
     next: NextFunction
 ) => {
     if (!req.session?.jwt) {
-        console.log("error 1 en common", req.session?.jwt);
+        console.log("error 1 en common", req.session);
         // Si no hay un token JWT en la sesión, devolver Unauthorized
         throw new NotAuthorizedError();
     }
