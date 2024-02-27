@@ -4,6 +4,7 @@ export enum RoutingKeys {
     PaymentCreated = "key_payment_created",
     ExpirationCompleted = "key_expiration_completed",
     PrivacyTermsUpdated = "key_privacy_terms_updated",
+    PrivacyTermsCreated = "key_privacy_terms_created",
     Empty = "",
 }
 
@@ -25,6 +26,7 @@ export enum QueueNames {
     PaymentUpdated = "payment_updated",
     ExpirationCompleted = "expiration_completed",
     PrivacyTermsUpdated = "privacy_updated",
+    PrivacyTermsCreated = "privacy_created",
 }
 
 export enum Instituciones {
