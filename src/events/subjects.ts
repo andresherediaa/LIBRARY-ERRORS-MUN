@@ -15,7 +15,7 @@ export enum ExchangeTypes {
     Direct = "direct",
     Topic = "topic",
     Default = "default",
-    Fanout = "fanout",
+    Fanout = "fanout"
 }
 
 export enum QueueNames {
