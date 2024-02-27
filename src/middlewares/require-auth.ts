@@ -10,6 +10,7 @@ interface UserAttrs {
     name: string;
     phone: string;
     image?: string;
+    institucion_terminal: string;
 }
 
 declare global {
