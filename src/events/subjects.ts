@@ -3,6 +3,7 @@ export enum RoutingKeys {
     OrderUpdated = "key_order_updated",
     PaymentCreated = "key_payment_created",
     ExpirationCompleted = "key_expiration_completed",
+    PrivacyTermsUpdated = "privacy_terms_updated",
     Empty = "",
 }
 
@@ -29,3 +30,4 @@ export enum Instituciones {
     ETAPA = "ETAPA",
     MUNICIPIO = "MUNICIPIO"
 }
+
