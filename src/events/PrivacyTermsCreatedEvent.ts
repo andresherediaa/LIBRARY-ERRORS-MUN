@@ -6,4 +6,3 @@ export interface PrivacyTermsCreatedEvent {
   version: number;
  };
 }
-export { };
