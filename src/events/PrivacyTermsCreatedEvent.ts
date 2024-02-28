@@ -1,4 +1,4 @@
-interface PrivacyTermsCreatedEvent {
+export interface PrivacyTermsCreatedEvent {
  data: {
   id: string;
   identificacion: string;
