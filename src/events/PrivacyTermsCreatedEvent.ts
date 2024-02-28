@@ -1,5 +1,9 @@
-export interface PrivacyTermsCreatedEvent {
- identificacion: string;
- instituciones: Map<string, boolean>;
+interface PrivacyTermsCreatedEvent {
+ data: {
+  id: string;
+  identificacion: string;
+  instituciones: Map<string, boolean>;
+  version: number;
+ };
 }
 export { };
