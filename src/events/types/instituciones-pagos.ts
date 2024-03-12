@@ -5,6 +5,52 @@ export type EntidadExterna = "PIMUNICI";
 export type FormaPago = "EFE";
 export type EstadoPagoType = "PAG" | "TRAN" | "TCOMP" | "ERRING" | "NOTC" | "MON" | "CTA" | "INST" | "AUT" | "REV" | "ECAN";
 
+export enum CanalTransacionalOptionsEnum {
+ VENT = "VENT",
+ NDAU = "NDAU",
+ ATM = "ATM",
+ BVIR = "BVIR",
+ BELE = "BELE",
+ IVR = "IVR",
+ BCEL = "BCEL"
+}
+
+export enum EstadoSolPagoTypeEnum {
+ ING = "ING",
+ FPAG = "FPAG",
+ INST = "INST",
+ DEB = "DEB",
+ BANE = "BANE",
+ MPAG = "MPAG",
+ SMAN = "SMAN",
+ EMI = "EMI",
+ AUT = "AUT",
+ CLIR = "CLIR",
+ ECAN = "ECAN"
+}
+
+export enum EntidadExternaEnum {
+ PIMUNICI = "PIMUNICI"
+}
+
+export enum FormaPagoEnum {
+ EFE = "EFE"
+}
+
+export enum EstadoPagoTypeEnum {
+ PAG = "PAG",
+ TRAN = "TRAN",
+ TCOMP = "TCOMP",
+ ERRING = "ERRING",
+ NOTC = "NOTC",
+ MON = "MON",
+ CTA = "CTA",
+ INST = "INST",
+ AUT = "AUT",
+ REV = "REV",
+ ECAN = "ECAN"
+}
+
 export interface EtapaSolPagosEntries {
  Ientidadexterna: EntidadExterna,
  Icuentabancaria: string,
