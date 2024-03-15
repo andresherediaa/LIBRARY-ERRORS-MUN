@@ -29,6 +29,7 @@ export interface OrderCreatedEvent {
         version: number;
         cart?:CartItem[]; // Cambiado a la nueva interfaz
         paymentMethod: string;
+        numTransaccion: string;
         totalDeuda: number;
         isPaid?: boolean;
         paidAt?: Date;
