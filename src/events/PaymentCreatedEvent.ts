@@ -1,5 +1,4 @@
 import { ExchangeNames, ExchangeTypes, QueueNames, RoutingKeys } from "./subjects";
-
 export interface PaymentCreatedEvent {
     exchangeName: ExchangeNames;
     exchangeType: ExchangeTypes;
