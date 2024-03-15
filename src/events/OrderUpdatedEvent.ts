@@ -26,8 +26,9 @@ export interface OrderUpdatedEvent {
         userId: string;
         expiresAt?: Date;
         version: number;
-        cart?: CartItem[]; // Cambiado a la nueva interfaz
+        cart?: CartItem[];
         paymentMethod: string;
+        numTransaccion: string;
         totalDeuda: number;
         isPaid?: boolean;
         paidAt?: Date;
