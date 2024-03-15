@@ -62,7 +62,7 @@ export interface EtapaSolPagosEntries {
 export interface EtapaSolPagosOutput {
  oEntidadExterna: FormaPago,
  oEstado: EstadoSolPagoType,
- oNumTransaccion: string
+ oNumTransaccion: number
 }
 export interface EtapaConfirmarPagoEntries {
  Ientidadexterna: EntidadExterna,
@@ -76,7 +76,7 @@ export interface EtapaConfirmarPagoEntries {
 export interface EtapaConfirmarPagoOutput {
  oEntidadExterna: EntidadExterna,
  oEstado: EstadoPagoType,
- oNumTransaccion: string,
+ oNumTransaccion: number,
  oIdentificadorDeuda: string,
  oInsCodReferencia: string,
  oNombresRazonSocial: string,

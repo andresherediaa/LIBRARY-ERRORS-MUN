@@ -9,6 +9,7 @@ export interface PaymentCreatedEvent {
         id: string;
         orderId: string;
         paymentId: string;
+        numTransaccion: string;
         version?: number;
     };
 }
