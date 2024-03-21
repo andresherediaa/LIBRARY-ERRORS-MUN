@@ -83,7 +83,7 @@ export interface EtapaConfirmarPagoOutput {
  oMensajeCliente: string
 }
 
-export interface DeudaReversoOutput {
+export interface EtapaReversoOutput {
  xmlns: string,
  oEntidadExterna: string,
  oEstado: string,
