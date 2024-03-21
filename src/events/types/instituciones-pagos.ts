@@ -66,13 +66,13 @@ export interface EtapaSolPagosOutput {
 }
 export interface EtapaConfirmarPagoEntries {
  Ientidadexterna: EntidadExterna,
- Icuentabancaria: string,
+ Icuentabancaria?: string,
  Iformapago: FormaPago,
  Icanaltransacional: CanalTransacionalOptions,
  Iidentificadordeuda: string,
  Imontopagar: number,
  Inumtransaccion: number,
-  Institucion: string
+ Institucion?: string
 }
 export interface EtapaConfirmarPagoOutput {
  oEntidadExterna: EntidadExterna,
