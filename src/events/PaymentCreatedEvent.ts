@@ -8,7 +8,7 @@ export interface PaymentCreatedEvent {
         id: string;
         orderId: string;
         paymentId: string;
-        numTransaccion: string;
+        numTransaccion: { [key: string]: string };
         Iidentificadordeuda: string;
         status: { [key: string]: string };
         version?: number;
