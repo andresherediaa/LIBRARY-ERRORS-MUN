@@ -11,6 +11,7 @@ export interface PaymentCreatedEvent {
         numTransaccion: { [key: string]: string };
         Iidentificadordeuda: string;
         status: { [key: string]: string };
+        institucion: string;
         version?: number;
     };
 }
