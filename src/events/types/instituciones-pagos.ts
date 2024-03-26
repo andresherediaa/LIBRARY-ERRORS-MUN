@@ -84,7 +84,7 @@ export interface EtapaConfirmarPagoOutput {
 }
 
 export interface EtapaReversoOutput {
- xmlns: string,
+ xmlns?: string,
  oEntidadExterna: string,
  oEstado: string,
  oNumTransaccion: any,
