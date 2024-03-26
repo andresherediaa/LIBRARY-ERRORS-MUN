@@ -89,6 +89,6 @@ export interface EtapaReversoOutput {
  oEstado: string,
  oNumTransaccion: any,
  oIdentificadorDeuda: string,
- oMensajes: Object
+ oMensajes?: Object
 }
 
