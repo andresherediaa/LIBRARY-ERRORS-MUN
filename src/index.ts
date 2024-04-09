@@ -21,3 +21,4 @@ export * from './events/types/order-status';
 export * from './events/PrivacyTermsCreatedEvent';
 export * from './events/PrivacyTermsUpdatedEvent';
 export * from './events/types/instituciones-pagos';
+export * from './logs/logger';
