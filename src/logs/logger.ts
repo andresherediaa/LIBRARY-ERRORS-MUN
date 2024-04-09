@@ -7,4 +7,4 @@ const logger = LogService.getInstance({
   logstashPort: process.env.LOGS_PORT,
 });
 
-export default logger;
+export { logger };
