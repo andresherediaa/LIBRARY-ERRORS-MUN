@@ -20,25 +20,26 @@ declare global {
         }
     }
 }
+
 export const requireAuth = (
     req: Request,
     res: Response,
     next: NextFunction
 ) => {
-    if (!req.session?.jwt) {
-        console.log("error common", req.session?.jwt);
-        // Si no hay un token JWT en la sesión, devolver Unauthorized
+    // Extraer el JWT del encabezado de autorización
+    const authorizationHeader = req.headers["authorization"];
+    if (!authorizationHeader || !authorizationHeader.startsWith("Bearer ")) {
         throw new NotAuthorizedError();
     }
 
+    const token = authorizationHeader.split(" ")[1];
+
     try {
-        const payload = jwt.verify(
-            req.session.jwt,
-            process.env.JWT_KEY!
-        ) as UserAttrs;
+        // Verificar y decodificar el JWT
+        const payload = jwt.verify(token, process.env.JWT_KEY!) as UserAttrs;
         req.currentUser = payload;
     } catch (err) {
-        console.log("error 2 en common", err);
+        console.log("Error al verificar el token:", err);
         throw new NotAuthorizedError();
     }
 
