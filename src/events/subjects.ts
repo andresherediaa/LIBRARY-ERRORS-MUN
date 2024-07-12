@@ -31,5 +31,6 @@ export enum QueueNames {
 
 export enum Instituciones {
     ETAPA = "ETAPA",
-    MUNICIPIO = "MUNICIPIO"
+    MUNICIPIO = "MUNICIPIO",
+    EMOV = "EMOV"
 }
