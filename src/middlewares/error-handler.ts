@@ -7,12 +7,18 @@ export const errorHandler = (
   res: Response,
   next: NextFunction
 ) => {
+  // Manejo de errores personalizados
   if (err instanceof CustomError) {
     return res.status(err.statusCode).send({ errors: err.serializeErrors() });
   }
 
-  console.error(err.message);
-  res.status(400).send({
-      errors: [{ message: "ERROR:" + err.message }],
+  // Manejo de errores genéricos
+  const statusCode = 400; // Código de estado por defecto para errores genéricos
+  res.status(statusCode).send({
+    errors: [{
+      msg: err.message,
+      status: statusCode // Agregar el código de estado al objeto de errores
+    }],
   });
 };
+
