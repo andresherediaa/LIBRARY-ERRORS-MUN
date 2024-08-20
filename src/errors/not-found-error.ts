@@ -11,6 +11,6 @@ export class NotFoundError extends CustomError {
   }
 
   serializeErrors() {
-    return { status: ErrorController.getGeneralStatus(this.statusCode.toString()), msg: ErrorController.getGeneralStatus(this.statusCode.toString()) };
+    return { status: ErrorController.getGeneralStatus(this.statusCode.toString()), msg: ErrorController.getErrorMessage(this.statusCode.toString()) };
   }
 }
