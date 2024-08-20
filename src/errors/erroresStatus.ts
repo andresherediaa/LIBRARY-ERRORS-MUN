@@ -246,7 +246,7 @@ export class ErrorController {
  }
 
  static getErrorMessage(apiStatusCode: string): string {
-  return errorCodes[apiStatusCode] || "Código de error desconocido";
+  return errorCodes[apiStatusCode] || "Error al procesar la solicitud";
  }
 }
 
