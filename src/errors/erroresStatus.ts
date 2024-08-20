@@ -111,7 +111,12 @@ export const errorCodes: { [key: string]: string } = {
  '500':'Hubo un error en el servidor. Inténtelo más tarde.',
  '404':'No se encontró el recurso solicitado.',
  '401':'No tiene autorización para acceder a este recurso.',
- '400':'La solicitud está mal formada o contiene datos inválidos.'
+ '400': 'La solicitud está mal formada o contiene datos inválidos.',
+ "ERR_BAD_REQUEST": "La solicitud fue malformada o contenía parámetros incorrectos.",
+ "ERR_NETWORK": "Hubo un problema de conexión con la red. Verifica tu conexión a internet o si el servidor está disponible.",
+ "ERR_BAD_RESPONSE": "El servidor respondió, pero la respuesta no fue válida o no fue lo que se esperaba.",
+ "ERR_TIMEOUT": "La solicitud tomó demasiado tiempo para completarse",
+ "ERR_CANCELED": "La solicitud fue cancelada antes de completarse.",
 };
 
 export const statusCodeMapping: { [key: string]: string } = {
@@ -227,7 +232,12 @@ export const statusCodeMapping: { [key: string]: string } = {
  '500': 'error',
  '404': 'error',
  '401': 'error',
- '400': 'error'
+ '400': 'error',
+ "ERR_BAD_REQUEST": "error",
+ "ERR_NETWORK": "error",
+ "ERR_BAD_RESPONSE": "error",
+ "ERR_TIMEOUT": "error",
+ "ERR_CANCELED": "error"
 };
 
 export class ErrorController {
