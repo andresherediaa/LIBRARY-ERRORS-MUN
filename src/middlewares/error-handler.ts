@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { CustomError } from '../errors/custom-error';
+import { ErrorController } from '../errors/erroresStatus';
 
 export const errorHandler = (
   err: Error,
@@ -14,11 +15,11 @@ export const errorHandler = (
 
   // Manejo de errores genéricos
   const statusCode = 400; // Código de estado por defecto para errores genéricos
-  res.status(statusCode).send({
-    errors: [{
-      msg: err.message,
-      status: statusCode // Agregar el código de estado al objeto de errores
-    }],
-  });
+  res.status(statusCode).send(
+    {
+      status: ErrorController.getGeneralStatus(statusCode.toString()),
+      msg: err.message,// Agregar el código de estado al objeto de errores
+    },
+  );
 };
 
