@@ -10,7 +10,7 @@ export const errorHandler = (
 ) => {
   // Manejo de errores personalizados
   if (err instanceof CustomError) {
-    return res.status(err.statusCode).send({ errors: err.serializeErrors() });
+    return res.status(err.statusCode).send(err.serializeErrors() );
   }
 
   // Manejo de errores genéricos
