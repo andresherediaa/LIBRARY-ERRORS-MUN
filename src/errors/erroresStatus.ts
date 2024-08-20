@@ -104,8 +104,8 @@ export const errorCodes: { [key: string]: string } = {
  "TINS": "Tipo de Instalación no coincide con identificador de la deuda",
 
  //Errores genrales
- 'ECONNABORTED':'La solicitud ha superado el tiempo de espera. Por favor, inténtelo de nuevo más tarde.',
- 'ECONNREFUSED':'No se pudo conectar al servidor. Por favor, verifique su conexión y vuelva a intentarlo.',
+ 'ECONNABORTED':'La solicitud ha superado el tiempo de espera. Inténtelo de nuevo más tarde.',
+ 'ECONNREFUSED':'No se pudo conectar al servidor. Verifique su conexión y vuelva a intentarlo.',
  'ENOTFOUND':'No se pudo encontrar el servidor. Por favor, verifique la URL e inténtelo de nuevo.',
  'EHOSTUNREACH':'El servidor está inalcanzable. Verifique su red e intente nuevamente.',
  '500':'Hubo un error en el servidor. Inténtelo más tarde.',
