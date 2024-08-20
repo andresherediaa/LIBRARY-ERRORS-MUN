@@ -1,4 +1,5 @@
 import { CustomError } from './custom-error';
+import { ErrorController } from './erroresStatus';
 
 export class BadRequestError extends CustomError {
   public statusCode:number = 400;
@@ -10,6 +11,6 @@ export class BadRequestError extends CustomError {
   }
 
   serializeErrors() {
-    return [{ msg: this.message, status: this.statusCode }];
+    return { msg: this.message, status: ErrorController.getGeneralStatus(this.statusCode.toString()) };
   }
 }
