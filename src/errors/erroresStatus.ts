@@ -101,7 +101,17 @@ export const errorCodes: { [key: string]: string } = {
  //consultas
  "OK": "La Consulta se realizó con éxito",
  "ERROR": "Se produjo un error al realizar la consulta",
- "TINS": "Tipo de Instalación no coincide con identificador de la deuda"
+ "TINS": "Tipo de Instalación no coincide con identificador de la deuda",
+
+ //Errores genrales
+ 'ECONNABORTED':'La solicitud ha superado el tiempo de espera. Por favor, inténtelo de nuevo más tarde.',
+ 'ECONNREFUSED':'No se pudo conectar al servidor. Por favor, verifique su conexión y vuelva a intentarlo.',
+ 'ENOTFOUND':'No se pudo encontrar el servidor. Por favor, verifique la URL e inténtelo de nuevo.',
+ 'EHOSTUNREACH':'El servidor está inalcanzable. Verifique su red e intente nuevamente.',
+ '500':'Hubo un error en el servidor. Inténtelo más tarde.',
+ '404':'No se encontró el recurso solicitado.',
+ '401':'No tiene autorización para acceder a este recurso.',
+ '400':'La solicitud está mal formada o contiene datos inválidos.'
 };
 
 export const statusCodeMapping: { [key: string]: string } = {
@@ -207,7 +217,17 @@ export const statusCodeMapping: { [key: string]: string } = {
  //consultas
  "OK": "success",
  "ERROR": "error",
- "TINS": "error"
+ "TINS": "error",
+
+ //errores generales
+ 'ECONNABORTED': 'error',
+ 'ECONNREFUSED': 'error',
+ 'ENOTFOUND': 'error',
+ 'EHOSTUNREACH': 'error',
+ '500': 'error',
+ '404': 'error',
+ '401': 'error',
+ '400': 'error'
 };
 
 export class ErrorController {
