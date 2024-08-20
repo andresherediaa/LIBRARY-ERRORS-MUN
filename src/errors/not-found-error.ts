@@ -1,4 +1,5 @@
 import { CustomError } from './custom-error';
+import { ErrorController } from './erroresStatus';
 
 export class NotFoundError extends CustomError {
   statusCode = 404;
@@ -10,6 +11,6 @@ export class NotFoundError extends CustomError {
   }
 
   serializeErrors() {
-    return [{ msg: 'Not Found' }];
+    return { status: ErrorController.getGeneralStatus(this.statusCode.toString()), msg: ErrorController.getGeneralStatus(this.statusCode.toString()) };
   }
 }
