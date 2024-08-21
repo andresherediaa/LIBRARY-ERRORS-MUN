@@ -74,6 +74,7 @@ export const errorCodes: { [key: string]: string } = {
  "M010": "No se puede procesar una orden que ya fue pagada",
  "M011": "Error al consultar Rubros",
  "M012": "La Consulta se realizó con éxito",
+ "M013": "Unauthorized: Invalid API Key",
 
  //confirmapago
  "PAG": "Ejecución satisfactoria",
@@ -192,6 +193,8 @@ export const statusCodeMapping: { [key: string]: string } = {
  "M010": "error",
  "M011": "error",
  "M012": "success",
+ "M013": "error",
+
  //confirmaPagoEtapa
  "PAG": "success",
  "TRAN": "error",
