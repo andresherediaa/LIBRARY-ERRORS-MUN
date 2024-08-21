@@ -76,7 +76,7 @@ export const errorCodes: { [key: string]: string } = {
  "M012": "La Consulta se realizó con éxito",
 
  //confirmapago
- "PAG": "Transacción Exitosa, Se registró el Pago",
+ "PAG": "Ejecución satisfactoria",
  "TRAN": "Transacción no registrada, Existe una solicitud de pago en el mismo día para el identificador de deuda ya confirmada(PAG)",
  "TCOMP": "Transacción ya comprobada",
  "ERRING": "Transacción no puede comprobar registro porque existió un error en la transacción al ingreso",
