@@ -76,6 +76,7 @@ export const errorCodes: { [key: string]: string } = {
  "M012": "La Consulta se realizó con éxito",
  "M013": "Unauthorized: Invalid API Key",
  "M014": "Error al generar comprobante de pago",
+ "M015": "Error al obtener Total Pagado",
 
  //confirmapago
  "PAG": "Ejecución satisfactoria",
@@ -196,6 +197,7 @@ export const statusCodeMapping: { [key: string]: string } = {
  "M012": "success",
  "M013": "error",
  "M014": "error",
+ "M015": "error",
 
  //confirmaPagoEtapa
  "PAG": "success",
@@ -223,10 +225,12 @@ export const statusCodeMapping: { [key: string]: string } = {
  //MUNI
  "MUNI001": "success",
  "MUNI002": "error",
+
  //consultas
  "OK": "success",
  "ERROR": "error",
  "TINS": "error",
+
  //errores generales
  'ECONNABORTED': 'error',
  'ECONNREFUSED': 'error',
