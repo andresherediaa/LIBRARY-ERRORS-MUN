@@ -223,12 +223,10 @@ export const statusCodeMapping: { [key: string]: string } = {
  //MUNI
  "MUNI001": "success",
  "MUNI002": "error",
-
  //consultas
  "OK": "success",
  "ERROR": "error",
  "TINS": "error",
-
  //errores generales
  'ECONNABORTED': 'error',
  'ECONNREFUSED': 'error',
