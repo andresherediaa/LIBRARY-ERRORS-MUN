@@ -75,6 +75,7 @@ export const errorCodes: { [key: string]: string } = {
  "M011": "Error al consultar Rubros",
  "M012": "La Consulta se realizó con éxito",
  "M013": "Unauthorized: Invalid API Key",
+ "M014": "Error al generar comprobante de pago",
 
  //confirmapago
  "PAG": "Ejecución satisfactoria",
@@ -107,15 +108,15 @@ export const errorCodes: { [key: string]: string } = {
  //Errores genrales
  'ECONNABORTED':'La solicitud ha superado el tiempo de espera. Inténtelo de nuevo más tarde.',
  'ECONNREFUSED':'No se pudo conectar al servidor. Verifique su conexión y vuelva a intentarlo.',
- 'ENOTFOUND':'No se pudo encontrar el servidor. Por favor, verifique la URL e inténtelo de nuevo.',
+ 'ENOTFOUND':'No se pudo encontrar el servidor. Verifique la URL e inténtelo de nuevo.',
  'EHOSTUNREACH':'El servidor está inalcanzable. Verifique su red e intente nuevamente.',
  '500':'Hubo un error en el servidor. Inténtelo más tarde.',
  '404':'No se encontró el recurso solicitado.',
  '401':'No tiene autorización para acceder a este recurso.',
  '400': 'La solicitud está mal formada o contiene datos inválidos.',
- "ERR_BAD_REQUEST": "La solicitud fue malformada o contenía parámetros incorrectos.",
- "ERR_NETWORK": "Hubo un problema de conexión con la red. Verifica tu conexión a internet o si el servidor está disponible.",
- "ERR_BAD_RESPONSE": "El servidor respondió, pero la respuesta no fue válida o no fue lo que se esperaba.",
+ "ERR_BAD_REQUEST": "La solicitud está mal formada o contiene datos inválidos.",
+ "ERR_NETWORK": "Hubo un problema de conexión con la red.",
+ "ERR_BAD_RESPONSE": "El servidor respondió, pero la respuesta no fue válida.",
  "ERR_TIMEOUT": "La solicitud tomó demasiado tiempo para completarse",
  "ERR_CANCELED": "La solicitud fue cancelada antes de completarse.",
 };
@@ -194,6 +195,7 @@ export const statusCodeMapping: { [key: string]: string } = {
  "M011": "error",
  "M012": "success",
  "M013": "error",
+ "M014": "error",
 
  //confirmaPagoEtapa
  "PAG": "success",
