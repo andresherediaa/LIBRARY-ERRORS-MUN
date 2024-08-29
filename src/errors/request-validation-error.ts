@@ -13,6 +13,6 @@ export class RequestValidationError extends CustomError {
   }
 
   serializeErrors() {
-    return { status: ErrorController.getGeneralStatus(this.statusCode.toString()), msg: this.errors[0].msg, field: this.errors[0].param };
+    return { status: ErrorController.getGeneralStatus(this.statusCode.toString()), msg: this.errors[0].msg, field: this.errors[0].param, code: this.statusCode.toString() };
   }
 }

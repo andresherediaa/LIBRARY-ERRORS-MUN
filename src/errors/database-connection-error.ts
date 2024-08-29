@@ -12,6 +12,6 @@ export class DatabaseConnectionError extends CustomError {
   }
 
   serializeErrors() {
-    return { msg: this.reason , status: ErrorController.getGeneralStatus(this.statusCode.toString()) };
+    return { msg: this.reason , status: ErrorController.getGeneralStatus(this.statusCode.toString()), code: this.statusCode.toString() };
   }
 }

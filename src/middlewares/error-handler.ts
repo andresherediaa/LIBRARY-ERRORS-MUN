@@ -19,6 +19,7 @@ export const errorHandler = (
     {
       status: ErrorController.getGeneralStatus(statusCode.toString()),
       msg: err.message,// Agregar el código de estado al objeto de errores
+      code: statusCode
     },
   );
 };
