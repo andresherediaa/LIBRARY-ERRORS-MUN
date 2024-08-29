@@ -11,6 +11,6 @@ export class BadRequestError extends CustomError {
   }
 
   serializeErrors() {
-    return { status: ErrorController.getGeneralStatus(this.statusCode.toString()), msg: this.message };
+    return { status: ErrorController.getGeneralStatus(this.statusCode.toString()), msg: this.message, code: this.statusCode.toString() };
   }
 }
