@@ -257,5 +257,9 @@ export class ErrorController {
  static getErrorMessage(apiStatusCode: string): string {
   return errorCodes[apiStatusCode] || "Error al procesar la solicitud";
  }
+
+ static getErrorCodes(apiStatusCode: string): string {
+  return errorCodes[apiStatusCode];
+ }
 }
 
