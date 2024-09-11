@@ -251,7 +251,7 @@ export const statusCodeMapping: { [key: string]: string } = {
 
 export class ErrorController {
  static getGeneralStatus(apiStatusCode: string): string {
-  return statusCodeMapping[apiStatusCode] || "unknown";
+  return statusCodeMapping[apiStatusCode] || "error";
  }
 
  static getErrorMessage(apiStatusCode: string): string {
