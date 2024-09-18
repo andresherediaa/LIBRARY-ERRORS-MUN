@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { CustomError } from '../errors/custom-error';
 import { ErrorController } from '../errors/erroresStatus';
+import apm from './apm';
 
 export const errorHandler = (
   err: Error,
@@ -8,6 +9,8 @@ export const errorHandler = (
   res: Response,
   next: NextFunction
 ) => {
+  //ELK LOGS
+  apm.captureError(err);
   // Manejo de errores personalizados
   if (err instanceof CustomError) {
     return res.status(err.statusCode).send(err.serializeErrors());
