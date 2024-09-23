@@ -3,13 +3,20 @@ const winston = require('winston');
 const { ElasticsearchTransport } = require('winston-elasticsearch');
 
 // Inicializa el APM
-const apmInstance = apm.start({
+/* const apmInstance = apm.start({
  serviceName: process.env.ELK_SERVICE_NAME || 'MUNICIPIO_OBSERVABILIDAD',
  apiKey: process.env.ELK_API_KEY,
  serverUrl: process.env.ELK_SERVER_URL,
  environment: process.env.ELK_ENVIRONMENT || 'DEV',
  logLevel: 'error',
-});
+}); */
+
+var apmInstance = require('elastic-apm-node').start({
+ serviceName: 'APM_LOGS_DEV_BILLETERA',
+ secretToken: '',
+ serverUrl: 'http://monitoreointeroperabilidad.cuenca.gob.ec/',
+ environment: 'CERTIFICA'
+})
 
 // Configura el transport para Elasticsearch
 const esTransport = new ElasticsearchTransport({
