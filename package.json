@@ -1,6 +1,6 @@
 {
     "name": "@munlib/common",
-    "version": "1.0.151",
+    "version": "1.0.152",
     "description": "",
     "main": "./build/index.js",
     "types": "./build/index.d.ts",
