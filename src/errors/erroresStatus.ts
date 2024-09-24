@@ -107,6 +107,23 @@ export const errorCodes: { [key: string]: string } = {
  "ERROR": "Se produjo un error al realizar la consulta",
  "TINS": "Tipo de Instalación no coincide con identificador de la deuda",
 
+ //reversoEtapa
+
+ "OK200": "El pago de la deuda ha sido reversado con éxito",
+ "ERR02": "Error al reversar el pago de la deuda, consulte con Recaudación",
+ "ERR03": "Error al reversar el pago de la deuda, consulte con Recaudación",
+ "ERR11": "Los parámetros especificados para el reverso son incorrectos",
+ "ERR12": "La transacción ya fue reversada",
+ "ERR13": "La transacción no se encuentra pagada",
+ "ERR14": "No se encuentran los parámetros de configuración requeridos, consulte con Recaudación",
+ "ERR15": "El número de la transacción no es correcto",
+ "ERR16": "El pago no tiene un documento asociado",
+ "ERR17": "No se puede reversar un pago contabilizado",
+ "ERR18": "No se puede reversar un pago de [desde] a [hasta], excepto [días]",
+ "ERR31": "La entidad bancaria no está habilitada para realizar reversos",
+ "ERR32": "La entidad bancaria no tiene permisos habilitados",
+ "ERR33": "La entidad bancaria no tiene habilitado el permiso para reversos",
+
  //Errores genrales
  'ECONNABORTED':'La solicitud ha superado el tiempo de espera. Inténtelo de nuevo más tarde.',
  'ECONNREFUSED':'No se pudo conectar al servidor. Verifique su conexión y vuelva a intentarlo.',
@@ -232,6 +249,22 @@ export const statusCodeMapping: { [key: string]: string } = {
  "OK": "success",
  "ERROR": "error",
  "TINS": "error",
+
+ //reverso
+ "OK200": "success",
+ "ERR02": "error",
+ "ERR03": "error",
+ "ERR11": "error",
+ "ERR12": "error",
+ "ERR13": "error",
+ "ERR14": "error",
+ "ERR15": "error",
+ "ERR16": "error",
+ "ERR17": "error",
+ "ERR18": "error",
+ "ERR31": "error",
+ "ERR32": "error",
+ "ERR33": "error",
 
  //errores generales
  'ECONNABORTED': 'error',
