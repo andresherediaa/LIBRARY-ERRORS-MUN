@@ -10,17 +10,15 @@ export const errorHandler = (
 ) => {
   const statusCode = 500; // Código de estado por defecto para errores genéricos
   if (err instanceof CustomError) {
-    console.log("ENTRA A CUSTOM ERROR******");
     return res.status(err.statusCode).send(err.serializeErrors());
   }
-  console.log("NO===> ENTRA A CUSTOM ERROR");
   res.status(statusCode).send(
     {
-      status: ErrorController.getGeneralStatus(statusCode.toString()),
+      status: ErrorController.getGeneralStatus(statusCode.toString()) || "error",
       msg: err.message,// Agregar el código de estado al objeto de errores
       code: statusCode,
-      typeError: "Middleware",
-      userMsg: ""
+      typeError: "MIDDLEWARE",
+      userMsg: ErrorController.getErrorMessage("MIDDLEWARE")
     },
   );
 };

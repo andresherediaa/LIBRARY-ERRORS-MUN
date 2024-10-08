@@ -141,8 +141,8 @@ export const errorCodes: { [key: string]: string } = {
 
  //Errores Especificos PARA EL USURIO
  "MIDDLEWARE": "Error interno de Sistema. Inténtelo nuevamente más tarde.",
- "USUARIO": "",
- "TECNICO": "Hemos encontrado un problema al procesar su solicitud. Inténtelo nuevamente más tarde.",
+ "USER": "",
+ "SINTAX": "Hemos encontrado un problema al procesar su solicitud. Inténtelo nuevamente más tarde.",
  "SUCCESS": "",
 };
 

@@ -29,8 +29,11 @@ export enum EstadoSolPagoTypeEnum {
  ECAN = "ECAN"
 }
 
-export enum EntidadExternaEnum {
- PIMUNICI = "PIMUNICI"
+export enum ErrorCategories {
+ MIDDLEWARE = "MIDDLEWARE",
+ USER = "USER",
+ SINTAX = "SINTAX",
+ SUCCESS = "SUCCESS",
 }
 
 export enum FormaPagoEnum {
@@ -52,7 +55,7 @@ export enum EstadoPagoTypeEnum {
 }
 
 export interface EtapaSolPagosEntries {
- Ientidadexterna: EntidadExterna,
+ Ientidadexterna: string,
  Icuentabancaria: string,
  Iformapago: FormaPago,
  Icanaltransacional: CanalTransacionalOptions,
@@ -65,7 +68,7 @@ export interface EtapaSolPagosOutput {
  oNumTransaccion: number
 }
 export interface EtapaConfirmarPagoEntries {
- Ientidadexterna: EntidadExterna;
+ Ientidadexterna: string;
  Icuentabancaria?: string;
  Iformapago: FormaPago;
  Icanaltransacional: CanalTransacionalOptions;
