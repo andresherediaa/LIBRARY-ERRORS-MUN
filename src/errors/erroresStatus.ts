@@ -74,7 +74,7 @@ export const errorCodes: { [key: string]: string } = {
  "M010": "No se puede procesar una orden que ya fue pagada",
  "M011": "Error al consultar Rubros",
  "M012": "La Consulta se realizo con exito",
- "M013": "Unauthorized: Invalid API Key",
+ "M013": "API Key de Middleware Invalida",
  "M014": "Error al generar comprobante de pago",
  "M015": "Error al obtener Total Pagado",
  "M016": "Error al obtener Comprobante de una orden no pagada/reversada",
@@ -138,6 +138,12 @@ export const errorCodes: { [key: string]: string } = {
  "ERR_BAD_RESPONSE": "El servidor respondio, pero la respuesta no fue valida.",
  "ERR_TIMEOUT": "La solicitud tomo demasiado tiempo para completarse",
  "ERR_CANCELED": "La solicitud fue cancelada antes de completarse.",
+
+ //Errores Especificos PARA EL USURIO
+ "MIDDLEWARE": "Error interno de Sistema. Inténtelo nuevamente más tarde.",
+ "USUARIO": "",
+ "TECNICO": "Hemos encontrado un problema al procesar su solicitud. Inténtelo nuevamente más tarde.",
+ "SUCCESS": "",
 };
 
 export const statusCodeMapping: { [key: string]: string } = {
@@ -278,7 +284,12 @@ export const statusCodeMapping: { [key: string]: string } = {
  "ERR_NETWORK": "error",
  "ERR_BAD_RESPONSE": "error",
  "ERR_TIMEOUT": "error",
- "ERR_CANCELED": "error"
+ "ERR_CANCELED": "error",
+
+ "MIDDLEWARE": "error",
+ "USUARIO": "error",
+ "TECNICO": "error",
+ "SUCCESS": "success",
 };
 
 export class ErrorController {

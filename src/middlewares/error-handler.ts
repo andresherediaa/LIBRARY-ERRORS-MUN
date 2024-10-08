@@ -20,7 +20,7 @@ export const errorHandler = (
       msg: err.message,// Agregar el código de estado al objeto de errores
       code: statusCode,
       typeError: "Middleware",
-      userMsg: "Hemos encontrado un problema al procesar su solicitud. Inténtelo nuevamente más tarde o contacte al soporte si el problema persiste."
+      userMsg: ""
     },
   );
 };
