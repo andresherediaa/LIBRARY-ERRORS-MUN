@@ -11,7 +11,7 @@ export class GenericError extends CustomError {
   public userMsg: string = "Hemos encontrado un problema. Inténtelo nuevamente más tarde." // Mensaje amigable para el usuario
  ) {
   super(msg, typeError, userMsg);
-  //this.statusCode = parseInt(code); // Convertir el código a número para HTTP
+  this.statusCode = parseInt(code); // Convertir el código a número para HTTP
   this.msg = ErrorController.getErrorMessage(code)  || this.message;
   Object.setPrototypeOf(this, GenericError.prototype);
  }
