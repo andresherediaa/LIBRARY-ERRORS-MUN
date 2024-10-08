@@ -265,7 +265,6 @@ export const statusCodeMapping: { [key: string]: string } = {
  "ERR31": "error",
  "ERR32": "error",
  "ERR33": "error",
-
  //errores generales
  'ECONNABORTED': 'error',
  'ECONNREFUSED': 'error',
