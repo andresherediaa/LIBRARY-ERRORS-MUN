@@ -8,6 +8,8 @@ export class NotAuthorizedError extends CustomError {
     userMsg: string
   ) {
     super('Not Authorized', typeMsg, userMsg);
+    this.typeMsg = this.typeMsg;
+    this.userMsg = this.userMsg;
     Object.setPrototypeOf(this, NotAuthorizedError.prototype);
   }
 
