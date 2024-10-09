@@ -20,7 +20,7 @@ export const errorHandler = (
       status: ErrorController.getGeneralStatus(statusCode.toString()) || "error",
       msg: err.message,// Agregar el código de estado al objeto de errores
       code: statusCode,
-      typeError: ErrorCategories.MIDDLEWARE,
+      typeMsg: ErrorCategories.MIDDLEWARE,
       userMsg: ErrorController.getErrorMessage("MIDDLEWARE")
     },
   );

@@ -4,10 +4,10 @@ import { ErrorController } from './erroresStatus';
 export class NotAuthorizedError extends CustomError {
   statusCode = 401;
   constructor(
-    typeError?: string,
-    userMsg?: string
+    typeMsg: string,
+    userMsg: string
   ) {
-    super('Not Authorized', typeError, userMsg);
+    super('Not Authorized', typeMsg, userMsg);
     Object.setPrototypeOf(this, NotAuthorizedError.prototype);
   }
 
@@ -16,7 +16,7 @@ export class NotAuthorizedError extends CustomError {
       status: ErrorController.getGeneralStatus(this.statusCode.toString()),
       msg: ErrorController.getErrorMessage(this.statusCode.toString()),
       code: this.statusCode.toString(),
-      typeError: this.typeError, // Añadir typeError
+      typeMsg: this.typeMsg, // Añadir typeError
       userMsg: this.userMsg,     // Añadir userMsg
     };
   }
