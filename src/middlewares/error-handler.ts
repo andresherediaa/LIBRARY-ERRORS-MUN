@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { CustomError } from '../errors/custom-error';
 import { ErrorController } from '../errors/erroresStatus';
+import { ErrorCategories } from '../events/types/instituciones-pagos';
 
 export const errorHandler = (
   err: Error,
@@ -19,7 +20,7 @@ export const errorHandler = (
       status: ErrorController.getGeneralStatus(statusCode.toString()) || "error",
       msg: err.message,// Agregar el código de estado al objeto de errores
       code: statusCode,
-      typeError: "MIDDLEWARE",
+      typeError: ErrorCategories.MIDDLEWARE,
       userMsg: ErrorController.getErrorMessage("MIDDLEWARE")
     },
   );

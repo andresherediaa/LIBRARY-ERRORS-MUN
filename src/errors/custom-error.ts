@@ -10,7 +10,7 @@ export abstract class CustomError extends Error {
     msg: string;
     status: string;
     code: string;
-    typeError?: string; // Opcional
-    userMsg?: string;   // Opcional
+    typeError: string; // Opcional
+    userMsg: string;   // Opcional
   };
 }
