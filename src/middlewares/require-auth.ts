@@ -29,7 +29,7 @@ export const requireAuth = (
     // Extraer el JWT del encabezado de autorización
     const authorizationHeader = req.headers["authorization"];
     if (!authorizationHeader || !authorizationHeader.startsWith("Bearer ")) {
-        throw new NotAuthorizedError();
+        throw new NotAuthorizedError("", "");
     }
 
     const token = authorizationHeader.split(" ")[1];
@@ -40,7 +40,7 @@ export const requireAuth = (
         req.currentUser = payload;
     } catch (err) {
         console.log("Error al verificar el token:", err);
-        throw new NotAuthorizedError();
+        throw new NotAuthorizedError("", "");
     }
 
     next();
@@ -55,7 +55,7 @@ export const requireAuthAdmin = (
     // Extraer el JWT del encabezado de autorización
     const authorizationHeader = req.headers["authorization"];
     if (!authorizationHeader || !authorizationHeader.startsWith("Bearer ")) {
-        throw new NotAuthorizedError();
+        throw new NotAuthorizedError("","");
     }
 
     const token = authorizationHeader.split(" ")[1];
@@ -65,11 +65,11 @@ export const requireAuthAdmin = (
         const payload = jwt.verify(token, process.env.JWT_KEY!) as UserAttrs;
         req.currentUser = payload;
         if (!payload.isAdmin) {
-            throw new NotAuthorizedError();
+            throw new NotAuthorizedError("", "");
         }
     } catch (err) {
         console.log("Error al verificar el token:", err);
-        throw new NotAuthorizedError();
+        throw new NotAuthorizedError("", "");
     }
 
     next();
