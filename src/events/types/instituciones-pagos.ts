@@ -4,7 +4,7 @@ export type EstadoSolPagoType = "ING" | "FPAG" | "INST" | "DEB" | "BANE" | "MPAG
 export type EntidadExterna = "PIMUNICI";
 export type FormaPago = "EFE";
 export type EstadoPagoType = "PAG" | "TRAN" | "TCOMP" | "ERRING" | "NOTC" | "MON" | "CTA" | "INST" | "AUT" | "REV" | "ECAN";
-export const etapaConsultasExcluidas = ["ERROR", "FPAG", "INST", "DEB", "BANE", "SMAN", "EMI", "CLIR"];
+export const etapaConsultasExcluidas = ["ERROR", "FPAG", "INST", "DEB", "BANE", "EMI", "CLIR"];
 
 export enum CanalTransacionalOptionsEnum {
  VENT = "VENT",
