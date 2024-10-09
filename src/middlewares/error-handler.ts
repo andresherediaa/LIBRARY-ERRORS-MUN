@@ -10,8 +10,10 @@ export const errorHandler = (
 ) => {
   const statusCode = 500; // Código de estado por defecto para errores genéricos
   if (err instanceof CustomError) {
+    console.log("instacoia de custom Error");
     return res.status(err.statusCode).send(err.serializeErrors());
   }
+  console.log("dorecto  Error");
   res.status(statusCode).send(
     {
       status: ErrorController.getGeneralStatus(statusCode.toString()) || "error",
