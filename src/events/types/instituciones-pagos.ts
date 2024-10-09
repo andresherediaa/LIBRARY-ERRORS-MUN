@@ -5,6 +5,7 @@ export type EntidadExterna = "PIMUNICI";
 export type FormaPago = "EFE";
 export type EstadoPagoType = "PAG" | "TRAN" | "TCOMP" | "ERRING" | "NOTC" | "MON" | "CTA" | "INST" | "AUT" | "REV" | "ECAN";
 export const etapaConsultasExcluidas = ["ERROR", "FPAG", "INST", "DEB", "BANE", "EMI", "CLIR"];
+export const allowedTiposETAPA = ["INT", "AGP", "TVD", "RDD", "TLF", ""];
 
 export enum CanalTransacionalOptionsEnum {
  VENT = "VENT",
