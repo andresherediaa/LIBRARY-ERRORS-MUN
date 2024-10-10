@@ -6,6 +6,7 @@ export type FormaPago = "EFE";
 export type EstadoPagoType = "PAG" | "TRAN" | "TCOMP" | "ERRING" | "NOTC" | "MON" | "CTA" | "INST" | "AUT" | "REV" | "ECAN";
 export const etapaConsultasExcluidas = ["ERROR", "FPAG", "INST", "DEB", "BANE", "EMI", "CLIR"];
 export const allowedTiposETAPA = ["INT", "AGP", "TVD", "RDD", "TLF", "INS", ""];
+export const allowedInstitucuiones = ["MUNICIPIO", "ETAPA", "EMOV"];
 
 export enum CanalTransacionalOptionsEnum {
  VENT = "VENT",

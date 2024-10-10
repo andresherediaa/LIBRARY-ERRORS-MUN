@@ -4,7 +4,6 @@ import { RequestValidationError } from '../errors/request-validation-error';
 import { ErrorController } from '../errors/erroresStatus';
 import { ErrorCategories } from '../events/types/instituciones-pagos';
 
-
 export const validateRequest = (
   req: Request,
   res: Response,
