@@ -7,7 +7,7 @@ export class RequestValidationError extends CustomError {
   statusCode = 400;
 
   constructor(
-    public errors: ValidationError[],
+    public errors: any,
     public typeMsg: string = ErrorCategories.SINTAX, 
     public userMsg: string = ErrorController.getErrorMessage(ErrorCategories.SINTAX)
   ) {
@@ -20,10 +20,10 @@ export class RequestValidationError extends CustomError {
 
 
   serializeErrors() {
-    console.log("******1111********", this.errors[0]);
+    console.log("******1111********", this.errors);
     return {
       status: ErrorController.getGeneralStatus(this.statusCode.toString()),
-      msg: this.errors[0].msg,
+      msg: this.errors.msg,
       code: this.statusCode.toString(),
       typeMsg: this.typeMsg,
       userMsg: this.userMsg

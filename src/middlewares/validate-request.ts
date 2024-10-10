@@ -12,12 +12,12 @@ export const validateRequest = (
 
   if (!errors.isEmpty()) {
     // Extraer el primer error y sus detalles personalizados (typeError y userMsg)
-    const firstError = errors.array()[0]; // Primer error encontrado
-    const typeError = firstError.msg.typeMsg || "SINTAX";
-    const userMsg = firstError.msg.userMsg || "Error de validación en la solicitud";
+    const msg = errors.array()[0]; // Primer error encontrado
+    const typeError = msg.msg.typeMsg || "SINTAX";
+    const userMsg = msg.msg.userMsg || "Error de validación en la solicitud";
 
     // Lanzar RequestValidationError con los campos personalizados
-    throw new RequestValidationError(errors.array(), userMsg, typeError);
+    throw new RequestValidationError(msg, userMsg, typeError);
   }
 
   next();
