@@ -11,23 +11,18 @@ export class RequestValidationError extends CustomError {
     public typeMsg: string = ErrorCategories.SINTAX,
     public userMsg: string = ErrorController.getErrorMessage(ErrorCategories.SINTAX)
   ) {
-    super('Invalid request parameters', "", "");
-    this.typeMsg = this.typeMsg;
-    this.userMsg = this.userMsg;
-    // Only because we are extending a built in class
-    Object.setPrototypeOf(this, RequestValidationError.prototype);
+    super(msg, typeMsg, userMsg);
+    Object.setPrototypeOf(this, RequestValidationError.prototype);  // Verifica que el prototipo se establezca correctamente
   }
 
-
   serializeErrors() {
-    console.log("******1111********", this.msg);
     return {
       status: ErrorController.getGeneralStatus(this.statusCode.toString()),
       msg: this.msg,
       code: this.statusCode.toString(),
       typeMsg: this.typeMsg,
-      userMsg: this.userMsg
+      userMsg: this.userMsg,
     };
   }
-
 }
+

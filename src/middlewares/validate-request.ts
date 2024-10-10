@@ -11,6 +11,8 @@ export const validateRequest = (
 ) => {
   const errors = validationResult(req);
 
+  console.log("VALIDATE REQUEST");
+
   if (!errors.isEmpty()) {
     // Extraer el primer error y sus detalles personalizados (typeError y userMsg)
     const msg  = errors.array()[0].msg.msg; // Primer error encontrado
