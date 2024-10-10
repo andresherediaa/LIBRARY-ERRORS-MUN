@@ -1,6 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
 import { validationResult } from 'express-validator';
 import { RequestValidationError } from '../errors/request-validation-error';
+import { ErrorController } from '../errors/erroresStatus';
+import { ErrorCategories } from '../events/types/instituciones-pagos';
 
 
 export const validateRequest = (
@@ -13,11 +15,11 @@ export const validateRequest = (
   if (!errors.isEmpty()) {
     // Extraer el primer error y sus detalles personalizados (typeError y userMsg)
     const msg = errors.array()[0].msg; // Primer error encontrado
-    const typeError = msg.msg.typeMsg || "SINTAX";
-    const userMsg = msg.msg.userMsg || "Error de validación en la solicitud";
+    const typeMsg = msg.typeMsg || ErrorCategories.SINTAX;
+    const userMsg = msg.userMsg || ErrorController.getErrorMessage(ErrorCategories.SINTAX);
 
     // Lanzar RequestValidationError con los campos personalizados
-    throw new RequestValidationError(msg, userMsg, typeError);
+    throw new RequestValidationError(msg, typeMsg, userMsg);
   }
 
   next();
