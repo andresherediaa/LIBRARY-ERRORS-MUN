@@ -18,7 +18,9 @@ export class RequestValidationError extends CustomError {
     Object.setPrototypeOf(this, RequestValidationError.prototype);
   }
 
+
   serializeErrors() {
+    console.log("******1111********", this.errors[0]);
     return {
       status: ErrorController.getGeneralStatus(this.statusCode.toString()),
       msg: this.errors[0].msg,

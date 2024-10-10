@@ -13,7 +13,7 @@ export const validateRequest = (
   if (!errors.isEmpty()) {
     // Extraer el primer error y sus detalles personalizados (typeError y userMsg)
     const firstError = errors.array()[0]; // Primer error encontrado
-    const typeError = firstError.msg.typeError || "VALIDATION_ERROR";
+    const typeError = firstError.msg.typeMsg || "SINTAX";
     const userMsg = firstError.msg.userMsg || "Error de validación en la solicitud";
 
     // Lanzar RequestValidationError con los campos personalizados
