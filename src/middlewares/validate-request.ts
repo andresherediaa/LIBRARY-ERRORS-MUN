@@ -13,7 +13,7 @@ export const validateRequest = (
 
   if (!errors.isEmpty()) {
     // Extraer el primer error y sus detalles personalizados (typeError y userMsg)
-    const msg = errors.array()[0].msg; // Primer error encontrado
+    const { msg } = errors.array()[0].msg; // Primer error encontrado
     const typeMsg = msg.typeMsg || ErrorCategories.SINTAX;
     const userMsg = msg.userMsg || ErrorController.getErrorMessage(ErrorCategories.SINTAX);
 

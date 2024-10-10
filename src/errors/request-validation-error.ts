@@ -7,8 +7,8 @@ export class RequestValidationError extends CustomError {
   statusCode = 400;
 
   constructor(
-    public errors: any,
-    public typeMsg: string = ErrorCategories.SINTAX, 
+    public msg: string,
+    public typeMsg: string = ErrorCategories.SINTAX,
     public userMsg: string = ErrorController.getErrorMessage(ErrorCategories.SINTAX)
   ) {
     super('Invalid request parameters', "", "");
@@ -20,10 +20,10 @@ export class RequestValidationError extends CustomError {
 
 
   serializeErrors() {
-    console.log("******1111********", this.errors);
+    console.log("******1111********", this.msg);
     return {
       status: ErrorController.getGeneralStatus(this.statusCode.toString()),
-      msg: this.errors.msg,
+      msg: this.msg,
       code: this.statusCode.toString(),
       typeMsg: this.typeMsg,
       userMsg: this.userMsg
