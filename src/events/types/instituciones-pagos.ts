@@ -8,6 +8,8 @@ export const etapaConsultasExcluidas = ["ERROR", "FPAG", "INST", "DEB", "BANE", 
 export const allowedTiposETAPA = ["INT", "AGP", "TVD", "RDD", "TLF", "INS", ""];
 export const allowedInstitucuiones = ["MUNICIPIO", "ETAPA", "EMOV"];
 
+export const emovSintaxErrorsCodes = ["ERROR", "FPAG", "INST", "DEB", "BANE", "EMI", "CLIR"];
+
 export enum CanalTransacionalOptionsEnum {
  VENT = "VENT",
  NDAU = "NDAU",

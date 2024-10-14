@@ -1,5 +1,7 @@
 // Define los códigos de error y el mapeo en el mismo archivo
 
+import { ErrorCategories } from "../events/types/instituciones-pagos";
+
 export const errorCodes: { [key: string]: string } = {
  "E000": "Ejecucion satisfactoria",
  "E001": "Clave incorrecta",
@@ -287,8 +289,8 @@ export const statusCodeMapping: { [key: string]: string } = {
  "ERR_CANCELED": "error",
 
  "MIDDLEWARE": "error",
- "USUARIO": "error",
- "TECNICO": "error",
+ "USER": "error",
+ "SINTAX": "error",
  "SUCCESS": "success",
 };
 
@@ -427,6 +429,145 @@ export const httpStatusCodes: { [key: string]: number } = {
  "ERR_CANCELED": 499
 }
 
+export const httpStatusCodesTypes: { [key: string]: string } = {
+ "E000": ErrorCategories.SUCCESS,
+ "E001": ErrorCategories.MIDDLEWARE,
+ "E002": ErrorCategories.SINTAX,
+ "E003": ErrorCategories.USER,
+ "E004": ErrorCategories.USER,
+ "E005": ErrorCategories.USER,
+ "E006": ErrorCategories.MIDDLEWARE,
+ "E007": ErrorCategories.MIDDLEWARE,
+ "E008": ErrorCategories.MIDDLEWARE,
+ "E009": ErrorCategories.MIDDLEWARE,
+ "E010": ErrorCategories.MIDDLEWARE,
+ "E011": ErrorCategories.USER,
+ "E012": ErrorCategories.SINTAX,
+ "E013": ErrorCategories.SINTAX,
+ "E014": ErrorCategories.SINTAX,
+ "E015": ErrorCategories.SINTAX,
+ "E016": ErrorCategories.SINTAX,
+ "E017": ErrorCategories.SINTAX,
+ "E018": ErrorCategories.SINTAX,
+ "E019": ErrorCategories.SINTAX,
+ "E020": ErrorCategories.SINTAX,
+ "E021": ErrorCategories.SINTAX,
+ "E022": ErrorCategories.SINTAX,
+ "E023": ErrorCategories.SINTAX,
+ "E024": ErrorCategories.SINTAX,
+ "E025": ErrorCategories.SINTAX,
+ "E026": ErrorCategories.USER,
+ "E027": ErrorCategories.SINTAX,
+ "E028": ErrorCategories.SINTAX,
+ "E029": ErrorCategories.SINTAX,
+ "E030": ErrorCategories.SINTAX,
+ "E031": ErrorCategories.SINTAX,
+ "E032": ErrorCategories.SINTAX,
+ "E033": ErrorCategories.SINTAX,
+ "E034": ErrorCategories.SINTAX,
+ "E035": ErrorCategories.SINTAX,
+ "E036": ErrorCategories.SINTAX,
+ "E037": ErrorCategories.SINTAX,
+ "E038": ErrorCategories.USER,
+ "E039": ErrorCategories.SINTAX,
+ "E040": ErrorCategories.SINTAX,
+ "E041": ErrorCategories.USER, 
+ "E042": ErrorCategories.USER, 
+ "E043": ErrorCategories.USER, 
+ "E044": ErrorCategories.USER, 
+ "E045": ErrorCategories.MIDDLEWARE,
+ "E046": ErrorCategories.MIDDLEWARE,
+ "E047": ErrorCategories.MIDDLEWARE,
+ "E048": ErrorCategories.USER,
+ "E049": ErrorCategories.SINTAX,
+ "E050": ErrorCategories.USER,
+ "E051": ErrorCategories.USER,
+ "E052": ErrorCategories.USER,
+ "E053": ErrorCategories.SINTAX,
+ "E054": ErrorCategories.SINTAX,
+ "E055": ErrorCategories.MIDDLEWARE,
+ "E056": ErrorCategories.SINTAX,
+ "E057": ErrorCategories.USER,
+ "E058": ErrorCategories.SINTAX,
+ "E099": ErrorCategories.MIDDLEWARE,
+
+ "M001": ErrorCategories.MIDDLEWARE,
+ "M002": ErrorCategories.MIDDLEWARE,
+ "M003": ErrorCategories.SINTAX,
+ "M004": ErrorCategories.MIDDLEWARE,
+ "M005": ErrorCategories.SINTAX,
+ "M006": ErrorCategories.MIDDLEWARE,
+ "M007": ErrorCategories.MIDDLEWARE,
+ "M008": ErrorCategories.SINTAX,
+ "M009": ErrorCategories.SINTAX,
+ "M010": ErrorCategories.SINTAX,
+ "M011": ErrorCategories.MIDDLEWARE,
+ "M012": ErrorCategories.SUCCESS,
+ "M013": ErrorCategories.MIDDLEWARE,
+ "M014": ErrorCategories.MIDDLEWARE,
+ "M015": ErrorCategories.MIDDLEWARE,
+ "M016": ErrorCategories.SINTAX,
+
+ //confirmapago
+ "PAG": ErrorCategories.SUCCESS,
+ "TRAN": ErrorCategories.USER,
+ "TCOMP": ErrorCategories.MIDDLEWARE,
+ "ERRING": ErrorCategories.MIDDLEWARE,
+ "NOTC": ErrorCategories.MIDDLEWARE,
+ "MON": ErrorCategories.SINTAX,
+ "CTA": ErrorCategories.MIDDLEWARE,
+ "INST": ErrorCategories.SINTAX,
+ "AUT": ErrorCategories.MIDDLEWARE,
+ "REV": ErrorCategories.SUCCESS,
+ "ECAN": ErrorCategories.MIDDLEWARE,
+
+ //SOLpago
+ "ING": ErrorCategories.SUCCESS,
+ "FPAG": ErrorCategories.USER,
+ "DEB": ErrorCategories.USER,
+ "BANE": ErrorCategories.USER,
+ "MPAG": ErrorCategories.SINTAX,
+ "SMAN": ErrorCategories.MIDDLEWARE,
+ "EMI": ErrorCategories.USER,
+ "CLIR": ErrorCategories.USER,
+ "PPAG": ErrorCategories.USER,
+
+ //consultas
+ "OK": ErrorCategories.SUCCESS,
+ "ERROR": ErrorCategories.MIDDLEWARE,
+ "TINS": ErrorCategories.SINTAX,
+
+ //REERSO
+ "OK200": ErrorCategories.SUCCESS,
+ "ERR02": ErrorCategories.MIDDLEWARE,
+ "ERR03": ErrorCategories.MIDDLEWARE,
+ "ERR11": ErrorCategories.MIDDLEWARE,
+ "ERR12": ErrorCategories.SINTAX,
+ "ERR13": ErrorCategories.SINTAX,
+ "ERR14": ErrorCategories.MIDDLEWARE,
+ "ERR15": ErrorCategories.MIDDLEWARE,
+ "ERR16": ErrorCategories.MIDDLEWARE,
+ "ERR17": ErrorCategories.SINTAX,
+ "ERR18": ErrorCategories.SINTAX,
+ "ERR31": ErrorCategories.MIDDLEWARE,
+ "ERR32": ErrorCategories.MIDDLEWARE,
+ "ERR33": ErrorCategories.MIDDLEWARE,
+
+ "ECONNABORTED": ErrorCategories.MIDDLEWARE,
+ "ECONNREFUSED": ErrorCategories.MIDDLEWARE,
+ "ENOTFOUND": ErrorCategories.MIDDLEWARE,
+ "EHOSTUNREACH": ErrorCategories.MIDDLEWARE,
+ "500": ErrorCategories.MIDDLEWARE,
+ "404": ErrorCategories.MIDDLEWARE,
+ "401": ErrorCategories.MIDDLEWARE,
+ "400": ErrorCategories.MIDDLEWARE,
+ "ERR_BAD_REQUEST": ErrorCategories.MIDDLEWARE,
+ "ERR_NETWORK": ErrorCategories.MIDDLEWARE,
+ "ERR_BAD_RESPONSE": ErrorCategories.MIDDLEWARE,
+ "ERR_TIMEOUT": ErrorCategories.MIDDLEWARE,
+ "ERR_CANCELED": ErrorCategories.MIDDLEWARE,
+}
+
 
 export class ErrorController {
  static getGeneralStatus(apiStatusCode: string): string {
@@ -443,6 +584,10 @@ export class ErrorController {
 
  static gethttpStatusCodes(apiStatusCode: string): number {
   return httpStatusCodes[apiStatusCode];
+ }
+
+ static gethttpStatusCodesTypes(apiStatusCode: string): string {
+  return statusCodeMapping[apiStatusCode] || ErrorCategories.MIDDLEWARE;
  }
 }
 
