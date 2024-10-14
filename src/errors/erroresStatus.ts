@@ -586,7 +586,7 @@ export class ErrorController {
  }
 
  static gethttpStatusCodesTypes(apiStatusCode: string): string {
-  return statusCodeMapping[apiStatusCode] || ErrorCategories.MIDDLEWARE;
+  return httpStatusCodesTypes[apiStatusCode] || ErrorCategories.MIDDLEWARE;
  }
 }
 
