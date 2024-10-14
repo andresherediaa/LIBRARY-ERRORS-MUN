@@ -568,7 +568,6 @@ export const httpStatusCodesTypes: { [key: string]: string } = {
  "ERR_CANCELED": ErrorCategories.MIDDLEWARE,
 }
 
-
 export class ErrorController {
  static getGeneralStatus(apiStatusCode: string): string {
   return statusCodeMapping[apiStatusCode] || "error";
