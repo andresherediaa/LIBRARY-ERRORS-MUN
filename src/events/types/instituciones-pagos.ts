@@ -1,12 +1,12 @@
 
 export type CanalTransacionalOptions = "VENT" | "NDAU" | "ATM" | "BVIR" | "BELE" | "IVR" | "BCEL";
 export type EstadoSolPagoType = "ING" | "FPAG" | "INST" | "DEB" | "BANE" | "MPAG" | "SMAN" | "EMI" | "AUT" | "CLIR" | "ECAN";
-export type EntidadExterna = "PIMUNICI";
+export type EntidadExterna = "BEMUNICI";
 export type FormaPago = "EFE";
 export type EstadoPagoType = "PAG" | "TRAN" | "TCOMP" | "ERRING" | "NOTC" | "MON" | "CTA" | "INST" | "AUT" | "REV" | "ECAN";
 export const etapaConsultasExcluidas = ["ERROR", "FPAG", "INST", "DEB", "BANE", "EMI", "CLIR"];
 export const allowedTiposETAPA = ["INT", "AGP", "TVD", "RDD", "TLF", "INS", ""];
-export const allowedInstitucuiones = ["MUNICIPIO", "ETAPA", "EMOV"];
+export const allowedInstituciones = ["MUNICIPIO", "ETAPA", "EMOV", "ALL"];
 export const emovSintaxErrorsCodes = ["ERROR", "FPAG", "INST", "DEB", "BANE", "EMI", "CLIR"];
 
 export const emovAllowedConsultaTypes = ["CED", "PLA", ""];
