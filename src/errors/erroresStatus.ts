@@ -80,6 +80,7 @@ export const errorCodes: { [key: string]: string } = {
  "M014": "Error al generar comprobante de pago",
  "M015": "Error al obtener Total Pagado",
  "M016": "Error al obtener Comprobante de una orden no pagada/reversada",
+ "M017": "No se puede cancelar una orden con STATUS:",
 
  //confirmapago
  "PAG": "Ejecucion satisfactoria",
@@ -225,6 +226,7 @@ export const statusCodeMapping: { [key: string]: string } = {
  "M014": "error",
  "M015": "error",
  "M016": "error",
+ "M017": "error",
 
  //confirmaPagoEtapa
  "PAG": "success",
@@ -372,6 +374,7 @@ export const httpStatusCodes: { [key: string]: number } = {
  "M014": 500,
  "M015": 500,
  "M016": 400,
+ "M017": 400,
 
  "PAG": 200,
  "TRAN": 409,
@@ -507,6 +510,7 @@ export const httpStatusCodesTypes: { [key: string]: string } = {
  "M014": ErrorCategories.MIDDLEWARE,
  "M015": ErrorCategories.MIDDLEWARE,
  "M016": ErrorCategories.SINTAX,
+ "M017": ErrorCategories.SINTAX,
 
  //confirmapago
  "PAG": ErrorCategories.SUCCESS,
