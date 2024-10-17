@@ -67,7 +67,7 @@ export const errorCodes: { [key: string]: string } = {
  "M001": "Error al cancelar Rubros",
  "M002": "Error al reversar Rubros",
  "M003": "No se encuentra la orden de pago",
- "M004": "No se puede procesar una orden que fue cancelada",
+ "M004": "No se puede procesar una orden que fue cancelada/reversada",
  "M005": "Error en los parametros de la orden",
  "M006": "Error al actualizar la orden de pago",
  "M007": "Error al inicializar base de datos",
@@ -80,7 +80,7 @@ export const errorCodes: { [key: string]: string } = {
  "M014": "Error al generar comprobante de pago",
  "M015": "Error al obtener Total Pagado",
  "M016": "Error al obtener Comprobante de una orden no pagada/reversada",
- "M017": "No se puede cancelar una orden con STATUS:",
+ "M017": "No se puede cancelar una orden pagada/reversada",
 
  //confirmapago
  "PAG": "Ejecucion satisfactoria",
