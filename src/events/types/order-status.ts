@@ -4,5 +4,6 @@ export enum OrderStatus {
     Pending = "PENDING",
     Completed = "COMPLETED",
     Reverted = "REVERSED",
-    Paid = "PAG"
+    Paid = "PAG",
+    Success = "SUCCESS"
 }
