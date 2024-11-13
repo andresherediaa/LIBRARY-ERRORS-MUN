@@ -93,6 +93,7 @@ export const errorCodes: { [key: string]: string } = {
  "INST": "El código de Instalacion no existe en la base maestra",
  "AUT": "No tiene autorizacion",
  "REV": "Reversado",
+ "REVERSED": "Reversado",
  "ECAN": "Canal transaccional enviado no existe",
  //solpago
  "ING": "Se ha realizado la solicitud satisfactoriamente",
@@ -239,6 +240,7 @@ export const statusCodeMapping: { [key: string]: string } = {
  "INST": "ERROR",
  "AUT": "ERROR",
  "REV": "SUCCESS",
+ "REVERSED": "SUCCESS",
  "ECAN": "ERROR",
  //solpagoEtapa
  "ING": "SUCCESS",
@@ -386,6 +388,7 @@ export const httpStatusCodes: { [key: string]: number } = {
  "INST": 404,
  "AUT": 401,
  "REV": 409,
+ "REVERSED": 409,
  "ECAN": 400,
 
  "ING": 200,
@@ -523,6 +526,7 @@ export const httpStatusCodesTypes: { [key: string]: string } = {
  "INST": ErrorCategories.SINTAX,
  "AUT": ErrorCategories.MIDDLEWARE,
  "REV": ErrorCategories.SUCCESS,
+ "REVERSED": ErrorCategories.SUCCESS,
  "ECAN": ErrorCategories.MIDDLEWARE,
 
  //SOLpago
