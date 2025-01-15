@@ -81,6 +81,7 @@ export const errorCodes: { [key: string]: string } = {
  "M015": "Error al obtener Total Pagado",
  "M016": "Error al obtener Comprobante de una orden no pagada/reversada",
  "M017": "No se puede cancelar una orden pagada/reversada",
+ "M018": "Error al obtener total de rubros en consultas",
 
  //confirmapago
  "PAG": "Ejecucion satisfactoria",
@@ -228,6 +229,7 @@ export const statusCodeMapping: { [key: string]: string } = {
  "M015": "ERROR",
  "M016": "ERROR",
  "M017": "ERROR",
+ "M018": "ERROR",
 
  //confirmaPagoEtapa
  "PAG": "SUCCESS",
@@ -377,6 +379,7 @@ export const httpStatusCodes: { [key: string]: number } = {
  "M015": 500,
  "M016": 400,
  "M017": 400,
+ "M018": 500,
 
  "PAG": 200,
  "TRAN": 409,
@@ -514,6 +517,7 @@ export const httpStatusCodesTypes: { [key: string]: string } = {
  "M015": ErrorCategories.MIDDLEWARE,
  "M016": ErrorCategories.SINTAX,
  "M017": ErrorCategories.SINTAX,
+ "M018": ErrorCategories.MIDDLEWARE,
 
  //confirmapago
  "PAG": ErrorCategories.SUCCESS,
