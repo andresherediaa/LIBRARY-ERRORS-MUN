@@ -1,4 +1,4 @@
-const apm = require('elastic-apm-node');
+/* const apm = require('elastic-apm-node');
 const winston = require('winston');
 const { ElasticsearchTransport } = require('winston-elasticsearch');
 
@@ -46,5 +46,5 @@ loggerAPM.on('data', (log: any) => {
 });
 
 // Exporta el logger y el APM para usarlos en tu aplicación
-export { apmInstance, loggerAPM };
+export { apmInstance, loggerAPM }; */
 

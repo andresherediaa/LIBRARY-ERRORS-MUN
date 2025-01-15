@@ -15,4 +15,4 @@ export * from './events/types/order-status';
 export * from './events/types/instituciones-pagos';
 export * from './logs/logger';
 export * from "./errors/erroresStatus";
-export * from './middlewares/apm';
+//export * from './middlewares/apm';
