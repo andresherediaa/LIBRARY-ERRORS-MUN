@@ -13,6 +13,6 @@ export * from './middlewares/validate-request';
 export * from './events/subjects';
 export * from './events/types/order-status';
 export * from './events/types/instituciones-pagos';
-export * from './logs/logger';
+//export * from './logs/logger';
 export * from "./errors/erroresStatus";
 //export * from './middlewares/apm';
