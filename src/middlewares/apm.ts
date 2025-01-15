@@ -45,6 +45,7 @@ loggerAPM.on('data', (log: any) => {
  apm.captureError(log); // Captura el log en APM
 });
 
+
 // Exporta el logger y el APM para usarlos en tu aplicación
 export { apmInstance, loggerAPM }; */
 
