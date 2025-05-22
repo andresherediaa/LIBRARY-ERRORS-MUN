@@ -82,6 +82,9 @@ export const errorCodes: { [key: string]: string } = {
  "M016": "Error al obtener Comprobante de una orden no pagada/reversada",
  "M017": "No se puede cancelar una orden pagada/reversada",
  "M018": "Error al obtener total de rubros en consultas",
+ "M019": "No se puede emitir el certificado de no adeudar debido a que el vehículo tiene deudas pendientes.",
+ "M020": "Debe pagar todas las deudas pendientes antes de matricular el vehículo. Agregue todas las deudas a la orden de pago.",
+ "M021": "Orden de pago unicamente debe contener certificado de no adeudar.",
 
  //confirmapago
  "PAG": "Ejecucion satisfactoria",
@@ -230,6 +233,9 @@ export const statusCodeMapping: { [key: string]: string } = {
  "M016": "ERROR",
  "M017": "ERROR",
  "M018": "ERROR",
+ "M019": "ERROR",
+ "M020": "ERROR",
+ "M021": "ERROR",
 
  //confirmaPagoEtapa
  "PAG": "SUCCESS",
@@ -380,6 +386,9 @@ export const httpStatusCodes: { [key: string]: number } = {
  "M016": 400,
  "M017": 400,
  "M018": 500,
+ "M019": 500,
+ "M020": 500,
+"M021": 500,
 
  "PAG": 200,
  "TRAN": 409,
@@ -518,6 +527,9 @@ export const httpStatusCodesTypes: { [key: string]: string } = {
  "M016": ErrorCategories.SINTAX,
  "M017": ErrorCategories.SINTAX,
  "M018": ErrorCategories.MIDDLEWARE,
+ "M019": ErrorCategories.MIDDLEWARE,
+ "M020": ErrorCategories.MIDDLEWARE,
+ "M021": ErrorCategories.MIDDLEWARE,
 
  //confirmapago
  "PAG": ErrorCategories.SUCCESS,
