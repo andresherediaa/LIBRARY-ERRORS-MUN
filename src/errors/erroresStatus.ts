@@ -83,10 +83,9 @@ export const errorCodes: { [key: string]: string } = {
  "M017": "No se puede cancelar una orden pagada/reversada",
  "M018": "Error al obtener total de rubros en consultas",
  "M019": "No se puede emitir el certificado de no adeudar debido a que el vehículo tiene deudas pendientes.",
- "M020": "Debe pagar todas las deudas pendientes para el proceso de Matricula. Agregue todas las deudas a la orden de pago.",
- "M021": "Orden de pago solo debe contener el rubro certificado de no adeudar.",
+ "M020": "En esta categoria debe pagar todas las deudas pendientes. Agregue todos los rubros a la orden de pago.",
+ "M021": "La Orden de pago solo debe contener el rubro: certificado de no adeudar (CER).",
  "M022": "Error al crear orden de pago",
-
  //confirmapago
  "PAG": "Ejecucion satisfactoria",
  "TRAN": "Transaccion no registrada, Existe una solicitud de pago en el mismo día para el identificador de deuda ya confirmada(PAG)",
