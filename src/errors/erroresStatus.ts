@@ -238,6 +238,7 @@ export const statusCodeMapping: { [key: string]: string } = {
  "M020": "ERROR",
  "M021": "ERROR",
  "M022": "ERROR",
+ "M023": "ERROR",
 
  //confirmaPagoEtapa
  "PAG": "SUCCESS",
@@ -392,6 +393,7 @@ export const httpStatusCodes: { [key: string]: number } = {
  "M020": 500,
 "M021": 500,
 "M022": 500,
+"M023": 500,
 
  "PAG": 200,
  "TRAN": 409,
@@ -534,6 +536,7 @@ export const httpStatusCodesTypes: { [key: string]: string } = {
  "M020": ErrorCategories.MIDDLEWARE,
  "M021": ErrorCategories.MIDDLEWARE,
  "M022": ErrorCategories.MIDDLEWARE,
+ "M023": ErrorCategories.MIDDLEWARE,
 
  //confirmapago
  "PAG": ErrorCategories.SUCCESS,
