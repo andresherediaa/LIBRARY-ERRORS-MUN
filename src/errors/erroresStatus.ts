@@ -591,7 +591,7 @@ export const httpStatusCodesTypes: { [key: string]: string } = {
  "500": ErrorCategories.MIDDLEWARE,
  "404": ErrorCategories.MIDDLEWARE,
  "401": ErrorCategories.MIDDLEWARE,
- "400": ErrorCategories.MIDDLEWARE,
+ "400": ErrorCategories.SINTAX,
  "ERR_BAD_REQUEST": ErrorCategories.MIDDLEWARE,
  "ERR_NETWORK": ErrorCategories.MIDDLEWARE,
  "ERR_BAD_RESPONSE": ErrorCategories.MIDDLEWARE,
