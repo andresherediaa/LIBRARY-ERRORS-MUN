@@ -459,7 +459,7 @@ export const httpStatusCodes: { [key: string]: number } = {
 export const httpStatusCodesTypes: { [key: string]: string } = {
  "E000": ErrorCategories.SUCCESS,
  "E001": ErrorCategories.MIDDLEWARE,
- "E002": ErrorCategories.SINTAX,
+ "E002": ErrorCategories.USER,
  "E003": ErrorCategories.USER,
  "E004": ErrorCategories.USER,
  "E005": ErrorCategories.USER,
