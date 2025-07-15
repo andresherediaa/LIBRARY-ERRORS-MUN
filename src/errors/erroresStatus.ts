@@ -87,7 +87,7 @@ export const errorCodes: { [key: string]: string } = {
  "M021": "La Orden de pago solo debe contener el rubro: certificado de no adeudar (CER).",
  "M022": "Error al crear orden de pago",
  "M023": "Error en el servicio externo de parqueo Tarifado (APP-SERT)",
- "M024": "Usuario no registrado o codigo de consulta incorrecto",
+ "M024": "Usuario no registrado o código de consulta incorrecto.",
  //confirmapago
  "PAG": "Ejecucion satisfactoria",
  "TRAN": "Transaccion no registrada, Existe una solicitud de pago en el mismo día para el identificador de deuda ya confirmada(PAG)",
