@@ -240,7 +240,7 @@ export const statusCodeMapping: { [key: string]: string } = {
  "M021": "ERROR",
  "M022": "ERROR",
  "M023": "ERROR",
- "M024": "ERROR",
+ "M024": "SUCCESS",
 
  //confirmaPagoEtapa
  "PAG": "SUCCESS",
