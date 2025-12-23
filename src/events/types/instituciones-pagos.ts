@@ -6,7 +6,7 @@ export type FormaPago = "EFE";
 export type EstadoPagoType = "PAG" | "TRAN" | "TCOMP" | "ERRING" | "NOTC" | "MON" | "CTA" | "INST" | "AUT" | "REV" | "ECAN";
 export const etapaConsultasExcluidas = ["ERROR", "FPAG", "INST", "DEB", "BANE", "EMI", "CLIR"];
 export const allowedTiposETAPA = ["INT", "AGP", "TVD", "RDD", "TLF", "INS", ""];
-export const allowedInstituciones = ["MUNICIPIO", "ETAPA", "EMOV", "SERT", "ALL"];
+export const allowedInstituciones = ["MUNICIPIO", "ETAPA", "EMOV", "SERT", "EMAC", "ALL"];
 export const emovSintaxErrorsCodes = ["ERROR", "FPAG", "INST", "DEB", "BANE", "EMI", "CLIR"];
 
 export const emovAllowedConsultaTypes = ["CED", "PLA", ""];
