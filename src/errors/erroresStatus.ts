@@ -125,7 +125,6 @@ export const errorCodes: { [key: string]: string } = {
     "EMI": "Deuda esta siendo emitida, consultar luego",
     "CLIR": "Cliente tiene restricciones de corbo",
     "PPAG": "Pago en proceso Banca Electronica",
-
     //consultas
     "OK": "La Consulta se realizo con exito",
     "ERROR": "Se produjo un error al realizar la consulta",
