@@ -129,7 +129,6 @@ export const errorCodes: { [key: string]: string } = {
     "OK": "La Consulta se realizo con exito",
     "ERROR": "Se produjo un error al realizar la consulta",
     "TINS": "Tipo de Instalación no coincide con identificador de la deuda",
-
     //reversoEtapa
     "OK200": "El pago de la deuda ha sido reversado con éxito",
     "ERR02": "Error al reversar el pago de la deuda, consulte con Recaudación",
