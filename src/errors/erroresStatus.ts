@@ -2,7 +2,6 @@
 
 import { ErrorCategories } from "../events/types/instituciones-pagos";
 
-
 export const errorCodes: { [key: string]: string } = {
     "E000": "Ejecucion satisfactoria",
     "E001": "Clave incorrecta",
