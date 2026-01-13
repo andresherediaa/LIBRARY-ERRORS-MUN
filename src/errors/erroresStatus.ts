@@ -569,7 +569,7 @@ export const httpStatusCodesTypes: { [key: string]: string } = {
     "208": ErrorCategories.SUCCESS,
     "210": ErrorCategories.MIDDLEWARE,
     "211": ErrorCategories.SUCCESS,
-    "212": ErrorCategories.SINTAX,
+    "212": ErrorCategories.USER,
     "213": ErrorCategories.MIDDLEWARE,
     "214": ErrorCategories.USER,
 
