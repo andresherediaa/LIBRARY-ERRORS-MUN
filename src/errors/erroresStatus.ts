@@ -432,7 +432,7 @@ export const httpStatusCodes: { [key: string]: number } = {
     "217": 400,
     "218": 400,
     "219": 404,
-    "220": 404,
+    "220": 400,
 
     "M001": 500,
     "M002": 500,
