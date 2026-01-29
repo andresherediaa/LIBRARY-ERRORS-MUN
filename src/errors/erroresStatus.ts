@@ -432,7 +432,7 @@ export const httpStatusCodes: { [key: string]: number } = {
     "217": 400,
     "218": 400,
     "219": 404,
-    "220": 400,
+    "220": 409,
 
     "M001": 500,
     "M002": 500,
@@ -597,7 +597,7 @@ export const httpStatusCodesTypes: { [key: string]: string } = {
     "217": ErrorCategories.SINTAX,
     "218": ErrorCategories.SINTAX,
     "219": ErrorCategories.SINTAX,
-    "220": ErrorCategories.SINTAX,
+    "220": ErrorCategories.USER,
 
     "M001": ErrorCategories.MIDDLEWARE,
     "M002": ErrorCategories.MIDDLEWARE,
