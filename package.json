@@ -1,6 +1,6 @@
 {
   "name": "@munlib/common",
-  "version": "1.0.241",
+  "version": "1.0.242",
   "description": "Common errors, middlewares and shared types for Munlib services",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
